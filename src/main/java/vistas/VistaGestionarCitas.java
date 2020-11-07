@@ -9,6 +9,7 @@ import com.vaadin.flow.component.polymertemplate.Id;
 import com.vaadin.flow.component.tabs.Tabs;
 import com.vaadin.flow.dom.Element;
 import vistas.VistaDarDeAlta;
+import com.vaadin.flow.component.tabs.Tab;
 
 /**
  * A Designer generated component for the vista-gestionar-citas template.
@@ -20,16 +21,15 @@ import vistas.VistaDarDeAlta;
 @JsModule("./src/vista-gestionar-citas.js")
 public class VistaGestionarCitas extends PolymerTemplate<VistaGestionarCitas.VistaGestionarCitasModel> {
 
-    @Id("vaadinHorizontalLayout")
-	private HorizontalLayout vaadinHorizontalLayout;
-	@Id("vaadinTabs")
-	private Tabs vaadinTabs;
+     
 	@Id("vistaVercitas")
 	private Element vistaVercitas;
 	@Id("vistaDarDeAlta")
 	private VistaDarDeAlta vistaDarDeAlta;
 	@Id("vistaVercitas1")
 	private Element vistaVercitas1;
+	@Id("vaadinHorizontalLayout")
+	private HorizontalLayout vaadinHorizontalLayout;
 
 	/**
      * Creates a new VistaGestionarCitas.
