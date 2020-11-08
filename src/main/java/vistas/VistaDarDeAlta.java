@@ -42,4 +42,36 @@ public class VistaDarDeAlta extends PolymerTemplate<VistaDarDeAlta.VistaDarDeAlt
     public interface VistaDarDeAltaModel extends TemplateModel {
         // Add setters and getters for template properties here.
     }
+
+	public VistaPonerAsunto getVistaPonerAsunto() {
+		return vistaPonerAsunto;
+	}
+
+	public void setVistaPonerAsunto(VistaPonerAsunto vistaPonerAsunto) {
+		this.vistaPonerAsunto = vistaPonerAsunto;
+	}
+
+	public VistaPonerCliente getVistaPonerCliente() {
+		return vistaPonerCliente;
+	}
+
+	public void setVistaPonerCliente(VistaPonerCliente vistaPonerCliente) {
+		this.vistaPonerCliente = vistaPonerCliente;
+	}
+
+	public VistaPonerFecha getVistaPonerFecha() {
+		return vistaPonerFecha;
+	}
+
+	public void setVistaPonerFecha(VistaPonerFecha vistaPonerFecha) {
+		this.vistaPonerFecha = vistaPonerFecha;
+	}
+
+	public Button getDarDeAta() {
+		return darDeAta;
+	}
+
+	public void setDarDeAta(Button darDeAta) {
+		this.darDeAta = darDeAta;
+	}
 }

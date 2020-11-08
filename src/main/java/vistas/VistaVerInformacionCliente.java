@@ -59,4 +59,36 @@ public class VistaVerInformacionCliente extends PolymerTemplate<VistaVerInformac
     public interface VistaVerInformacionClienteModel extends TemplateModel {
         // Add setters and getters for template properties here.
     }
+
+	public TextField getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(TextField nombre) {
+		this.nombre = nombre;
+	}
+
+	public TextField getDireccion() {
+		return direccion;
+	}
+
+	public void setDireccion(TextField direccion) {
+		this.direccion = direccion;
+	}
+
+	public TextField getTelefono() {
+		return telefono;
+	}
+
+	public void setTelefono(TextField telefono) {
+		this.telefono = telefono;
+	}
+
+	public Button getVaadinButton() {
+		return vaadinButton;
+	}
+
+	public void setVaadinButton(Button vaadinButton) {
+		this.vaadinButton = vaadinButton;
+	}
 }

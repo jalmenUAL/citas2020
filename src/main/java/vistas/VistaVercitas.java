@@ -53,5 +53,69 @@ public class VistaVercitas extends PolymerTemplate<VistaVercitas.VistaVercitasMo
         // Add setters and getters for template properties here.
     }
 
+	public Element getVaadinVerticalLayout() {
+		return vaadinVerticalLayout;
+	}
+
+	public void setVaadinVerticalLayout(Element vaadinVerticalLayout) {
+		this.vaadinVerticalLayout = vaadinVerticalLayout;
+	}
+
+	public Grid getTabla() {
+		return tabla;
+	}
+
+	public void setTabla(Grid tabla) {
+		this.tabla = tabla;
+	}
+
+	public Button getRealizar() {
+		return realizar;
+	}
+
+	public void setRealizar(Button realizar) {
+		this.realizar = realizar;
+	}
+
+	public Button getPosponer() {
+		return posponer;
+	}
+
+	public void setPosponer(Button posponer) {
+		this.posponer = posponer;
+	}
+
+	public Button getCambiarFecha() {
+		return cambiarFecha;
+	}
+
+	public void setCambiarFecha(Button cambiarFecha) {
+		this.cambiarFecha = cambiarFecha;
+	}
+
+	public DatePicker getNuevaFecha() {
+		return nuevaFecha;
+	}
+
+	public void setNuevaFecha(DatePicker nuevaFecha) {
+		this.nuevaFecha = nuevaFecha;
+	}
+
+	public Button getDarBajaACliente() {
+		return darBajaACliente;
+	}
+
+	public void setDarBajaACliente(Button darBajaACliente) {
+		this.darBajaACliente = darBajaACliente;
+	}
+
+	public Button getVerInformacionCliente() {
+		return verInformacionCliente;
+	}
+
+	public void setVerInformacionCliente(Button verInformacionCliente) {
+		this.verInformacionCliente = verInformacionCliente;
+	}
+
 	 
 }

@@ -1,6 +1,8 @@
 package interfazdeusuario;
 
-public class Administrador {
+import vistas.VistaAdministrador;
+
+public class Administrador extends VistaAdministrador {
 	 
 
 	 

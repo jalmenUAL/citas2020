@@ -36,4 +36,20 @@ public class VistaPonerFecha extends PolymerTemplate<VistaPonerFecha.VistaPonerF
     public interface VistaPonerFechaModel extends TemplateModel {
         // Add setters and getters for template properties here.
     }
+
+	public Element getVaadinVerticalLayout() {
+		return vaadinVerticalLayout;
+	}
+
+	public void setVaadinVerticalLayout(Element vaadinVerticalLayout) {
+		this.vaadinVerticalLayout = vaadinVerticalLayout;
+	}
+
+	public DatePicker getFechaCita() {
+		return fechaCita;
+	}
+
+	public void setFechaCita(DatePicker fechaCita) {
+		this.fechaCita = fechaCita;
+	}
 }

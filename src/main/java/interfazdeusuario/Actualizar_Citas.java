@@ -6,7 +6,7 @@ public class Actualizar_Citas extends Ver_Citas {
 	 
 
 	public Actualizar_Citas() {
-		throw new UnsupportedOperationException();
+		 this.getDarBajaACliente().setVisible(false);
 	}
 
 	void Inicializar() {

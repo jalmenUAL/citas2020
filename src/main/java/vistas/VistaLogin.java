@@ -44,4 +44,12 @@ public class VistaLogin extends PolymerTemplate<VistaLogin.VistaLoginModel> {
 	public void setVaadinLoginForm(LoginForm vaadinLoginForm) {
 		this.vaadinLoginForm = vaadinLoginForm;
 	}
+
+	public Element getVaadinVerticalLayout() {
+		return vaadinVerticalLayout;
+	}
+
+	public void setVaadinVerticalLayout(Element vaadinVerticalLayout) {
+		this.vaadinVerticalLayout = vaadinVerticalLayout;
+	}
 }

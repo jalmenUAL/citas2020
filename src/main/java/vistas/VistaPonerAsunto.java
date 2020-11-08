@@ -42,4 +42,36 @@ public class VistaPonerAsunto extends PolymerTemplate<VistaPonerAsunto.VistaPone
     public interface VistaPonerAsuntoModel extends TemplateModel {
         // Add setters and getters for template properties here.
     }
+
+	public Element getVaadinVerticalLayout() {
+		return vaadinVerticalLayout;
+	}
+
+	public void setVaadinVerticalLayout(Element vaadinVerticalLayout) {
+		this.vaadinVerticalLayout = vaadinVerticalLayout;
+	}
+
+	public ComboBox<String> getSeleccionAsunto() {
+		return seleccionAsunto;
+	}
+
+	public void setSeleccionAsunto(ComboBox<String> seleccionAsunto) {
+		this.seleccionAsunto = seleccionAsunto;
+	}
+
+	public Button getNuevioAsunto() {
+		return nuevioAsunto;
+	}
+
+	public void setNuevioAsunto(Button nuevioAsunto) {
+		this.nuevioAsunto = nuevioAsunto;
+	}
+
+	public TextField getIntroduzcaElAsunto() {
+		return introduzcaElAsunto;
+	}
+
+	public void setIntroduzcaElAsunto(TextField introduzcaElAsunto) {
+		this.introduzcaElAsunto = introduzcaElAsunto;
+	}
 }

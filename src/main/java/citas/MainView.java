@@ -11,6 +11,10 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.PWA;
 
+import interfazdeusuario.Actualizar_Citas;
+import interfazdeusuario.Administrador;
+import interfazdeusuario.Generico;
+import interfazdeusuario.Usuario;
 import vistas.VistaGestionarCitas;
 import vistas.VistaLogin;
 import vistas.VistaVercitas;
@@ -47,36 +51,35 @@ public class MainView extends VerticalLayout {
      */
     public MainView() {
     	
-    	VistaLogin ln = new VistaLogin();
-    	add(ln);
-    	setHeight("100%");
-    	LoginForm lf = ln.getVaadinLoginForm();
+    	Generico gen = new Generico();
     	
-    	lf.addLoginListener(e -> {
+        add(gen);
+        
+        
+        VistaLogin vl = gen.getVistaLogin().as(VistaLogin.class);
+        
+    	
+    	vl.getVaadinLoginForm().addLoginListener(e -> {
     	    
     	    if (e.getUsername().equals("admin")) {
     	    	
-    	    	VistaGestionarCitas gc = new VistaGestionarCitas();
-    	    	remove(ln);
+    	    	Administrador gc = new Administrador();
+    	    	remove(gen);
     	    	add(gc);
     	    	
     	    }
     	    else if (e.getUsername().equals("usuario")) {
     	    	
-    	    	VistaVercitas gc = new VistaVercitas();
-    	    	remove(ln);
+    	    	Usuario gc = new Usuario();
+    	    	remove(gen);
     	    	add(gc);
+    	    	 
     	        
     	    } else {
-    	        lf.setError(true);
+    	    	vl.getVaadinLoginForm().setError(true);
     	    }
     	});
-    	 
-
-    	
-    	
-    	
-    	
+    	 	
     }
 
 }

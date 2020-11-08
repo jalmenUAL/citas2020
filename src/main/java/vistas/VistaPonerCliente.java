@@ -42,4 +42,36 @@ public class VistaPonerCliente extends PolymerTemplate<VistaPonerCliente.VistaPo
     public interface VistaPonerClienteModel extends TemplateModel {
         // Add setters and getters for template properties here.
     }
+
+	public Element getVaadinVerticalLayout() {
+		return vaadinVerticalLayout;
+	}
+
+	public void setVaadinVerticalLayout(Element vaadinVerticalLayout) {
+		this.vaadinVerticalLayout = vaadinVerticalLayout;
+	}
+
+	public ComboBox<String> getSeleccionCliente() {
+		return seleccionCliente;
+	}
+
+	public void setSeleccionCliente(ComboBox<String> seleccionCliente) {
+		this.seleccionCliente = seleccionCliente;
+	}
+
+	public Button getNuevo() {
+		return nuevo;
+	}
+
+	public void setNuevo(Button nuevo) {
+		this.nuevo = nuevo;
+	}
+
+	public TextField getNuevoCliente() {
+		return nuevoCliente;
+	}
+
+	public void setNuevoCliente(TextField nuevoCliente) {
+		this.nuevoCliente = nuevoCliente;
+	}
 }
