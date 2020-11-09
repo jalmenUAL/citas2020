@@ -14,6 +14,7 @@ import com.vaadin.flow.server.PWA;
 import interfazdeusuario.Actualizar_Citas;
 import interfazdeusuario.Administrador;
 import interfazdeusuario.Generico;
+import interfazdeusuario.Login;
 import interfazdeusuario.Usuario;
 import vistas.VistaGestionarCitas;
 import vistas.VistaLogin;
@@ -55,11 +56,9 @@ public class MainView extends VerticalLayout {
     	
         add(gen);
         
-        
-        VistaLogin vl = gen.getVistaLogin().as(VistaLogin.class);
-        
+        LoginForm vl = gen.ln.getVaadinLoginForm();
     	
-    	vl.getVaadinLoginForm().addLoginListener(e -> {
+    	vl.addLoginListener(e -> {
     	    
     	    if (e.getUsername().equals("admin")) {
     	    	
@@ -76,7 +75,7 @@ public class MainView extends VerticalLayout {
     	    	 
     	        
     	    } else {
-    	    	vl.getVaadinLoginForm().setError(true);
+    	    	vl.setError(true);
     	    }
     	});
     	 	

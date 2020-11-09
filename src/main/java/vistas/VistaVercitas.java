@@ -33,10 +33,10 @@ public class VistaVercitas extends PolymerTemplate<VistaVercitas.VistaVercitasMo
 	private Button cambiarFecha;
 	@Id("nuevaFecha")
 	private DatePicker nuevaFecha;
-	@Id("darBajaACliente")
-	private Button darBajaACliente;
 	@Id("verInformacionCliente")
 	private Button verInformacionCliente;
+	@Id("darBajaACita")
+	private Button darBajaACita;
 	/**
      * Creates a new VistaVercitas.
      */
@@ -101,13 +101,7 @@ public class VistaVercitas extends PolymerTemplate<VistaVercitas.VistaVercitasMo
 		this.nuevaFecha = nuevaFecha;
 	}
 
-	public Button getDarBajaACliente() {
-		return darBajaACliente;
-	}
-
-	public void setDarBajaACliente(Button darBajaACliente) {
-		this.darBajaACliente = darBajaACliente;
-	}
+	 
 
 	public Button getVerInformacionCliente() {
 		return verInformacionCliente;
@@ -115,6 +109,14 @@ public class VistaVercitas extends PolymerTemplate<VistaVercitas.VistaVercitasMo
 
 	public void setVerInformacionCliente(Button verInformacionCliente) {
 		this.verInformacionCliente = verInformacionCliente;
+	}
+
+	public Button getDarBajaACita() {
+		return darBajaACita;
+	}
+
+	public void setDarBajaACita(Button darBajaACita) {
+		this.darBajaACita = darBajaACita;
 	}
 
 	 

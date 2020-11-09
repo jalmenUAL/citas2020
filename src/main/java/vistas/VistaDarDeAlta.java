@@ -9,6 +9,7 @@ import com.vaadin.flow.component.polymertemplate.Id;
 import vistas.VistaPonerCliente;
 import vistas.VistaPonerFecha;
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.dom.Element;
 
 /**
  * A Designer generated component for the vista-dar-de-alta template.
@@ -20,14 +21,11 @@ import com.vaadin.flow.component.button.Button;
 @JsModule("./src/vista-dar-de-alta.js")
 public class VistaDarDeAlta extends PolymerTemplate<VistaDarDeAlta.VistaDarDeAltaModel> {
 
-    @Id("vistaPonerAsunto")
-	private VistaPonerAsunto vistaPonerAsunto;
-	@Id("vistaPonerCliente")
-	private VistaPonerCliente vistaPonerCliente;
-	@Id("vistaPonerFecha")
-	private VistaPonerFecha vistaPonerFecha;
+     
 	@Id("darDeAta")
 	private Button darDeAta;
+	@Id("vaadinVerticalLayout")
+	private Element vaadinVerticalLayout;
 
 	/**
      * Creates a new VistaDarDeAlta.
@@ -43,29 +41,7 @@ public class VistaDarDeAlta extends PolymerTemplate<VistaDarDeAlta.VistaDarDeAlt
         // Add setters and getters for template properties here.
     }
 
-	public VistaPonerAsunto getVistaPonerAsunto() {
-		return vistaPonerAsunto;
-	}
-
-	public void setVistaPonerAsunto(VistaPonerAsunto vistaPonerAsunto) {
-		this.vistaPonerAsunto = vistaPonerAsunto;
-	}
-
-	public VistaPonerCliente getVistaPonerCliente() {
-		return vistaPonerCliente;
-	}
-
-	public void setVistaPonerCliente(VistaPonerCliente vistaPonerCliente) {
-		this.vistaPonerCliente = vistaPonerCliente;
-	}
-
-	public VistaPonerFecha getVistaPonerFecha() {
-		return vistaPonerFecha;
-	}
-
-	public void setVistaPonerFecha(VistaPonerFecha vistaPonerFecha) {
-		this.vistaPonerFecha = vistaPonerFecha;
-	}
+	 
 
 	public Button getDarDeAta() {
 		return darDeAta;
@@ -73,5 +49,13 @@ public class VistaDarDeAlta extends PolymerTemplate<VistaDarDeAlta.VistaDarDeAlt
 
 	public void setDarDeAta(Button darDeAta) {
 		this.darDeAta = darDeAta;
+	}
+
+	public Element getVaadinVerticalLayout() {
+		return vaadinVerticalLayout;
+	}
+
+	public void setVaadinVerticalLayout(Element vaadinVerticalLayout) {
+		this.vaadinVerticalLayout = vaadinVerticalLayout;
 	}
 }

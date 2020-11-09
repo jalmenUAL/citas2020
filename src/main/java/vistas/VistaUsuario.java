@@ -17,8 +17,9 @@ import com.vaadin.flow.component.polymertemplate.Id;
 @JsModule("./src/vista-usuario.js")
 public class VistaUsuario extends PolymerTemplate<VistaUsuario.VistaUsuarioModel> {
 
-    @Id("vistaVercitas")
-	private Element vistaVercitas;
+    
+	@Id("vaadinVerticalLayout")
+	private Element vaadinVerticalLayout;
 
 	/**
      * Creates a new VistaUsuario.
@@ -33,4 +34,12 @@ public class VistaUsuario extends PolymerTemplate<VistaUsuario.VistaUsuarioModel
     public interface VistaUsuarioModel extends TemplateModel {
         // Add setters and getters for template properties here.
     }
+
+	public Element getVaadinVerticalLayout() {
+		return vaadinVerticalLayout;
+	}
+
+	public void setVaadinVerticalLayout(Element vaadinVerticalLayout) {
+		this.vaadinVerticalLayout = vaadinVerticalLayout;
+	}
 }

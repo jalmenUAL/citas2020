@@ -5,13 +5,15 @@ import vistas.VistaVercitas;
 public class Ver_Citas extends VistaVercitas  {
 	 
 	
-	public Gestionar_Citas _unnamed_Gestionar_Citas_;
-	public Ver_Informacion_de_Cliente _unnamed_Ver_Informacion_de_Cliente_;
 	 
 
 	public Ver_Citas() {
-		super();
-	 
+		 
+		this.getPosponer().setVisible(false);
+		this.getRealizar().setVisible(false);
+		this.getCambiarFecha().setVisible(false);
+		this.getNuevaFecha().setVisible(false);
+		this.getDarBajaACita().setVisible(false);
 	}
 
 	void Inicializar() {

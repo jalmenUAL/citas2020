@@ -18,8 +18,10 @@ import com.vaadin.flow.component.polymertemplate.Id;
 @JsModule("./src/vista-generico.js")
 public class VistaGenerico extends PolymerTemplate<VistaGenerico.VistaGenericoModel> {
 
-    @Id("vistaLogin")
-	private Element vistaLogin;
+     
+
+	@Id("vaadinVerticalLayout")
+	private Element vaadinVerticalLayout;
 
 	/**
      * Creates a new VistaGenerico.
@@ -38,11 +40,13 @@ public class VistaGenerico extends PolymerTemplate<VistaGenerico.VistaGenericoMo
         // Add setters and getters for template properties here.
     }
 
-	public Element getVistaLogin() {
-		return vistaLogin;
+	public Element getVaadinVerticalLayout() {
+		return vaadinVerticalLayout;
 	}
 
-	public void setVistaLogin(Element vistaLogin) {
-		this.vistaLogin = vistaLogin;
+	public void setVaadinVerticalLayout(Element vaadinVerticalLayout) {
+		this.vaadinVerticalLayout = vaadinVerticalLayout;
 	}
+
+	 
 }

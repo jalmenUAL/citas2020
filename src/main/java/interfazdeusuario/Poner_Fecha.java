@@ -1,5 +1,9 @@
 package interfazdeusuario;
 
-public class Poner_Fecha {
-	public Dar_de_Alta_Cita _unnamed_Dar_de_Alta_Cita_;
+import vistas.VistaPonerFecha;
+
+public class Poner_Fecha extends VistaPonerFecha {
+	
+	public Poner_Fecha() {}
+	 
 }

@@ -22,12 +22,7 @@ import com.vaadin.flow.component.tabs.Tab;
 public class VistaGestionarCitas extends PolymerTemplate<VistaGestionarCitas.VistaGestionarCitasModel> {
 
      
-	@Id("vistaVercitas")
-	private Element vistaVercitas;
-	@Id("vistaDarDeAlta")
-	private VistaDarDeAlta vistaDarDeAlta;
-	@Id("vistaVercitas1")
-	private Element vistaVercitas1;
+	 
 	@Id("vaadinHorizontalLayout")
 	private HorizontalLayout vaadinHorizontalLayout;
 
@@ -45,30 +40,6 @@ public class VistaGestionarCitas extends PolymerTemplate<VistaGestionarCitas.Vis
         // Add setters and getters for template properties here.
     }
 
-	public Element getVistaVercitas() {
-		return vistaVercitas;
-	}
-
-	public void setVistaVercitas(Element vistaVercitas) {
-		this.vistaVercitas = vistaVercitas;
-	}
-
-	public VistaDarDeAlta getVistaDarDeAlta() {
-		return vistaDarDeAlta;
-	}
-
-	public void setVistaDarDeAlta(VistaDarDeAlta vistaDarDeAlta) {
-		this.vistaDarDeAlta = vistaDarDeAlta;
-	}
-
-	public Element getVistaVercitas1() {
-		return vistaVercitas1;
-	}
-
-	public void setVistaVercitas1(Element vistaVercitas1) {
-		this.vistaVercitas1 = vistaVercitas1;
-	}
-
 	public HorizontalLayout getVaadinHorizontalLayout() {
 		return vaadinHorizontalLayout;
 	}
@@ -76,4 +47,6 @@ public class VistaGestionarCitas extends PolymerTemplate<VistaGestionarCitas.Vis
 	public void setVaadinHorizontalLayout(HorizontalLayout vaadinHorizontalLayout) {
 		this.vaadinHorizontalLayout = vaadinHorizontalLayout;
 	}
+
+	 
 }

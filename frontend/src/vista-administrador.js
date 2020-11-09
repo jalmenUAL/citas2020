@@ -1,5 +1,5 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
-import './vista-gestionar-citas.js';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 
 class VistaAdministrador extends PolymerElement {
 
@@ -12,7 +12,7 @@ class VistaAdministrador extends PolymerElement {
         			width: 100%;
                 }
             </style>
-<vista-gestionar-citas id="vistaGestionarCitas"></vista-gestionar-citas>
+<vaadin-vertical-layout style="width: 100%; height: 100%;" id="vaadinVerticalLayout"></vaadin-vertical-layout>
 `;
     }
 

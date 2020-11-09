@@ -1,13 +1,16 @@
 package interfazdeusuario;
 
+import vistas.VistaPonerCliente;
 
-public class Poner_Cliente {
+public class Poner_Cliente extends VistaPonerCliente {
 	Boolean _cliente = false;
 	 
-	public Dar_de_Alta_Cita _unnamed_Dar_de_Alta_Cita_;
+	 
 
 	public Poner_Cliente() {
-		throw new UnsupportedOperationException();
+		
+		this.getNuevoCliente().setVisible(false);
+		 
 	}
 
 	void Inicializar() {

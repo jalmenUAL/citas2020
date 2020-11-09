@@ -1,19 +1,22 @@
 package interfazdeusuario;
 
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
+import vistas.VistaDarDeAlta;
 
-public class Dar_de_Alta_Cita {
+public class Dar_de_Alta_Cita extends VistaDarDeAlta {
 	 
-	Poner_Cliente _pcl = new Poner_Cliente();
-	Poner_Asunto _pas = new Poner_Asunto();
-	Poner_Fecha _pf = new Poner_Fecha();
-	public Gestionar_Citas _unnamed_Gestionar_Citas_;
-	public Poner_Fecha _unnamed_Poner_Fecha_;
-	public Poner_Cliente _unnamed_Poner_Cliente_;
-	public Poner_Asunto _unnamed_Poner_Asunto_;
+	Poner_Asunto pa = new Poner_Asunto();
+	Poner_Cliente pcl = new Poner_Cliente();
+	Poner_Fecha pf = new Poner_Fecha();
+	 
 
 	public Dar_de_Alta_Cita() {
-		throw new UnsupportedOperationException();
+		 VerticalLayout vl = this.getVaadinVerticalLayout().as(VerticalLayout.class);
+		 vl.addComponentAsFirst(pa);
+		 vl.addComponentAsFirst(pcl);
+		 vl.addComponentAsFirst(pf);
+		 
 	}
 
 	void darDeAltaCita() {

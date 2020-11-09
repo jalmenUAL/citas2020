@@ -6,6 +6,7 @@ import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
 import vistas.VistaGestionarCitas;
 import com.vaadin.flow.component.polymertemplate.Id;
+import com.vaadin.flow.dom.Element;
 
 /**
  * A Designer generated component for the vista-administrador template.
@@ -17,8 +18,9 @@ import com.vaadin.flow.component.polymertemplate.Id;
 @JsModule("./src/vista-administrador.js")
 public class VistaAdministrador extends PolymerTemplate<VistaAdministrador.VistaAdministradorModel> {
 
-    @Id("vistaGestionarCitas")
-	private VistaGestionarCitas vistaGestionarCitas;
+     
+	@Id("vaadinVerticalLayout")
+	private Element vaadinVerticalLayout;
 
 	/**
      * Creates a new VistaAdministrador.
@@ -33,4 +35,12 @@ public class VistaAdministrador extends PolymerTemplate<VistaAdministrador.Vista
     public interface VistaAdministradorModel extends TemplateModel {
         // Add setters and getters for template properties here.
     }
+
+	public Element getVaadinVerticalLayout() {
+		return vaadinVerticalLayout;
+	}
+
+	public void setVaadinVerticalLayout(Element vaadinVerticalLayout) {
+		this.vaadinVerticalLayout = vaadinVerticalLayout;
+	}
 }

@@ -1,13 +1,15 @@
 package interfazdeusuario;
 
+import vistas.VistaPonerAsunto;
 
-public class Poner_Asunto {
+public class Poner_Asunto extends VistaPonerAsunto {
 	Boolean _asunto = false;
 	 
-	public Dar_de_Alta_Cita _unnamed_Dar_de_Alta_Cita_;
 
 	public Poner_Asunto() {
-		throw new UnsupportedOperationException();
+		
+		this.getIntroduzcaElAsunto().setVisible(false);
+		 
 	}
 
 	void Inicializar() {

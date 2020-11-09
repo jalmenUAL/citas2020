@@ -1,5 +1,5 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
-import './vista-login.js';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 
 class VistaGenerico extends PolymerElement {
 
@@ -12,7 +12,7 @@ class VistaGenerico extends PolymerElement {
         			width: 100%;
                 }
             </style>
-<vista-login id="vistaLogin"></vista-login>
+<vaadin-vertical-layout style="width: 100%; height: 100%;" id="vaadinVerticalLayout"></vaadin-vertical-layout>
 `;
     }
 

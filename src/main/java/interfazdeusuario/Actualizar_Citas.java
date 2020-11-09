@@ -6,11 +6,13 @@ public class Actualizar_Citas extends Ver_Citas {
 	 
 
 	public Actualizar_Citas() {
-		 this.getDarBajaACliente().setVisible(false);
+		this.getPosponer().setVisible(true);
+		this.getRealizar().setVisible(true);
+		
 	}
 
 	void Inicializar() {
-		throw new UnsupportedOperationException();
+		 
 	}
 
 	void RealizarCita() {
