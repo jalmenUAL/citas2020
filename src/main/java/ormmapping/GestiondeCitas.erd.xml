@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<Model quotesql="1" tablecharset="" mysql_version="505" mssql_version="2005" derby_version="106">
-  <Entity name="Cita">
+<Model quotesql="1" tablecharset="" mysql_version="505" mssql_version="2005" derby_version="106" ingres_version="9">
+  <Entity name="Cita" Unlogged="false" PKClustered="0">
     <Column name="ID">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>false</ForeignKey>
       <Type>9</Type>
-      <Length>11</Length>
+      <Length>10</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -16,9 +16,9 @@
     <Column name="AsuntoID">
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>citas.Asunto.ID</ReferencedColumn>
+      <ReferencedColumn>basededatos.Asunto.ID</ReferencedColumn>
       <Type>9</Type>
-      <Length>11</Length>
+      <Length>10</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -26,13 +26,13 @@
       <UserTypes/>
     </Column>
   </Entity>
-  <Entity name="Cita_Activa">
+  <Entity name="Cita_Activa" Unlogged="false" PKClustered="0">
     <Column name="CitaID">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>citas.Cita.ID</ReferencedColumn>
+      <ReferencedColumn>basededatos.Cita.ID</ReferencedColumn>
       <Type>9</Type>
-      <Length>11</Length>
+      <Length>10</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -40,13 +40,13 @@
       <UserTypes/>
     </Column>
   </Entity>
-  <Entity name="Cita_Realizada">
+  <Entity name="Cita_Realizada" Unlogged="false" PKClustered="0">
     <Column name="CitaID">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>citas.Cita.ID</ReferencedColumn>
+      <ReferencedColumn>basededatos.Cita.ID</ReferencedColumn>
       <Type>9</Type>
-      <Length>11</Length>
+      <Length>10</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -54,12 +54,12 @@
       <UserTypes/>
     </Column>
   </Entity>
-  <Entity name="Asunto">
+  <Entity name="Asunto" Unlogged="false" PKClustered="0">
     <Column name="ID">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>false</ForeignKey>
       <Type>9</Type>
-      <Length>11</Length>
+      <Length>10</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -78,12 +78,12 @@
       <UserTypes/>
     </Column>
   </Entity>
-  <Entity name="Cliente">
+  <Entity name="Cliente" Unlogged="false" PKClustered="0">
     <Column name="ID">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>false</ForeignKey>
       <Type>9</Type>
-      <Length>11</Length>
+      <Length>10</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -124,12 +124,12 @@
       <UserTypes/>
     </Column>
   </Entity>
-  <Entity name="Fecha">
+  <Entity name="Fecha" Unlogged="false" PKClustered="0">
     <Column name="ID">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>false</ForeignKey>
       <Type>9</Type>
-      <Length>11</Length>
+      <Length>10</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -140,7 +140,7 @@
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>false</ForeignKey>
       <Type>9</Type>
-      <Length>11</Length>
+      <Length>10</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -151,7 +151,7 @@
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>false</ForeignKey>
       <Type>9</Type>
-      <Length>11</Length>
+      <Length>10</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -162,7 +162,7 @@
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>false</ForeignKey>
       <Type>9</Type>
-      <Length>11</Length>
+      <Length>10</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -172,9 +172,9 @@
     <Column name="CitaID">
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>citas.Cita.ID</ReferencedColumn>
+      <ReferencedColumn>basededatos.Cita.ID</ReferencedColumn>
       <Type>9</Type>
-      <Length>11</Length>
+      <Length>10</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -184,9 +184,9 @@
     <Column name="ClienteID">
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>citas.Cliente.ID</ReferencedColumn>
+      <ReferencedColumn>basededatos.Cliente.ID</ReferencedColumn>
       <Type>9</Type>
-      <Length>11</Length>
+      <Length>10</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>

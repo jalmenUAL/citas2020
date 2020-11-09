@@ -1,32 +1,32 @@
 /**
- * Licensee: Daniel Landa
- * License Type: Purchased
+ * Licensee: Administrator(University of Almeria)
+ * License Type: Academic
  */
 package ormsamples;
 
 import org.orm.*;
 public class CreateGestiondeCitasData {
 	public void createTestData() throws PersistentException {
-		PersistentTransaction t = citas.GestiondeCitasPersistentManager.instance().getSession().beginTransaction();
+		PersistentTransaction t = basededatos.GestiondeCitasPersistentManager.instance().getSession().beginTransaction();
 		try {
-			citas.Cita lcitasCita = citas.CitaDAO.createCita();
+			basededatos.Cita lbasededatosCita = basededatos.CitaDAO.createCita();
 			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : fecha, es_para
-			citas.CitaDAO.save(lcitasCita);
-			citas.Cita_Activa lcitasCita_Activa = citas.Cita_ActivaDAO.createCita_Activa();
+			basededatos.CitaDAO.save(lbasededatosCita);
+			basededatos.Cita_Activa lbasededatosCita_Activa = basededatos.Cita_ActivaDAO.createCita_Activa();
 			// Initialize the properties of the persistent object here
-			citas.Cita_ActivaDAO.save(lcitasCita_Activa);
-			citas.Cita_Realizada lcitasCita_Realizada = citas.Cita_RealizadaDAO.createCita_Realizada();
+			basededatos.Cita_ActivaDAO.save(lbasededatosCita_Activa);
+			basededatos.Cita_Realizada lbasededatosCita_Realizada = basededatos.Cita_RealizadaDAO.createCita_Realizada();
 			// Initialize the properties of the persistent object here
-			citas.Cita_RealizadaDAO.save(lcitasCita_Realizada);
-			citas.Asunto lcitasAsunto = citas.AsuntoDAO.createAsunto();
+			basededatos.Cita_RealizadaDAO.save(lbasededatosCita_Realizada);
+			basededatos.Asunto lbasededatosAsunto = basededatos.AsuntoDAO.createAsunto();
 			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : de_la_cita
-			citas.AsuntoDAO.save(lcitasAsunto);
-			citas.Cliente lcitasCliente = citas.ClienteDAO.createCliente();
+			basededatos.AsuntoDAO.save(lbasededatosAsunto);
+			basededatos.Cliente lbasededatosCliente = basededatos.ClienteDAO.createCliente();
 			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : fechas
-			citas.ClienteDAO.save(lcitasCliente);
-			citas.Fecha lcitasFecha = citas.FechaDAO.createFecha();
+			basededatos.ClienteDAO.save(lbasededatosCliente);
+			basededatos.Fecha lbasededatosFecha = basededatos.FechaDAO.createFecha();
 			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : cliente, cita, anyo, mes, dia
-			citas.FechaDAO.save(lcitasFecha);
+			basededatos.FechaDAO.save(lbasededatosFecha);
 			t.commit();
 		}
 		catch (Exception e) {
@@ -42,7 +42,7 @@ public class CreateGestiondeCitasData {
 				createGestiondeCitasData.createTestData();
 			}
 			finally {
-				citas.GestiondeCitasPersistentManager.instance().disposePersistentManager();
+				basededatos.GestiondeCitasPersistentManager.instance().disposePersistentManager();
 			}
 		}
 		catch (Exception e) {

@@ -1,32 +1,32 @@
 /**
- * Licensee: Daniel Landa
- * License Type: Purchased
+ * Licensee: Administrator(University of Almeria)
+ * License Type: Academic
  */
 package ormsamples;
 
 import org.orm.*;
 public class DeleteGestiondeCitasData {
 	public void deleteTestData() throws PersistentException {
-		PersistentTransaction t = citas.GestiondeCitasPersistentManager.instance().getSession().beginTransaction();
+		PersistentTransaction t = basededatos.GestiondeCitasPersistentManager.instance().getSession().beginTransaction();
 		try {
-			citas.Cita lcitasCita = citas.CitaDAO.loadCitaByQuery(null, null);
+			basededatos.Cita lbasededatosCita = basededatos.CitaDAO.loadCitaByQuery(null, null);
 			// Delete the persistent object
-			citas.CitaDAO.delete(lcitasCita);
-			citas.Cita_Activa lcitasCita_Activa = citas.Cita_ActivaDAO.loadCita_ActivaByQuery(null, null);
+			basededatos.CitaDAO.delete(lbasededatosCita);
+			basededatos.Cita_Activa lbasededatosCita_Activa = basededatos.Cita_ActivaDAO.loadCita_ActivaByQuery(null, null);
 			// Delete the persistent object
-			citas.Cita_ActivaDAO.delete(lcitasCita_Activa);
-			citas.Cita_Realizada lcitasCita_Realizada = citas.Cita_RealizadaDAO.loadCita_RealizadaByQuery(null, null);
+			basededatos.Cita_ActivaDAO.delete(lbasededatosCita_Activa);
+			basededatos.Cita_Realizada lbasededatosCita_Realizada = basededatos.Cita_RealizadaDAO.loadCita_RealizadaByQuery(null, null);
 			// Delete the persistent object
-			citas.Cita_RealizadaDAO.delete(lcitasCita_Realizada);
-			citas.Asunto lcitasAsunto = citas.AsuntoDAO.loadAsuntoByQuery(null, null);
+			basededatos.Cita_RealizadaDAO.delete(lbasededatosCita_Realizada);
+			basededatos.Asunto lbasededatosAsunto = basededatos.AsuntoDAO.loadAsuntoByQuery(null, null);
 			// Delete the persistent object
-			citas.AsuntoDAO.delete(lcitasAsunto);
-			citas.Cliente lcitasCliente = citas.ClienteDAO.loadClienteByQuery(null, null);
+			basededatos.AsuntoDAO.delete(lbasededatosAsunto);
+			basededatos.Cliente lbasededatosCliente = basededatos.ClienteDAO.loadClienteByQuery(null, null);
 			// Delete the persistent object
-			citas.ClienteDAO.delete(lcitasCliente);
-			citas.Fecha lcitasFecha = citas.FechaDAO.loadFechaByQuery(null, null);
+			basededatos.ClienteDAO.delete(lbasededatosCliente);
+			basededatos.Fecha lbasededatosFecha = basededatos.FechaDAO.loadFechaByQuery(null, null);
 			// Delete the persistent object
-			citas.FechaDAO.delete(lcitasFecha);
+			basededatos.FechaDAO.delete(lbasededatosFecha);
 			t.commit();
 		}
 		catch (Exception e) {
@@ -42,7 +42,7 @@ public class DeleteGestiondeCitasData {
 				deleteGestiondeCitasData.deleteTestData();
 			}
 			finally {
-				citas.GestiondeCitasPersistentManager.instance().disposePersistentManager();
+				basededatos.GestiondeCitasPersistentManager.instance().disposePersistentManager();
 			}
 		}
 		catch (Exception e) {

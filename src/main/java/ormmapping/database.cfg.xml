@@ -8,7 +8,7 @@
     <DriverClass></DriverClass>
     <URL></URL>
     <UserName></UserName>
-    <Password></Password>
+    <EncryptedPassword>32F3ACE632ECEBAFB24DCAF99A8C6CDC</EncryptedPassword>
     <HostName></HostName>
     <PortNO></PortNO>
     <DBName></DBName>
@@ -23,7 +23,7 @@
     <DriverClass></DriverClass>
     <URL></URL>
     <UserName></UserName>
-    <Password></Password>
+    <EncryptedPassword>32F3ACE632ECEBAFB24DCAF99A8C6CDC</EncryptedPassword>
     <HostName></HostName>
     <PortNO></PortNO>
     <DBName></DBName>
@@ -38,7 +38,7 @@
     <DriverClass></DriverClass>
     <URL></URL>
     <UserName></UserName>
-    <Password></Password>
+    <EncryptedPassword>32F3ACE632ECEBAFB24DCAF99A8C6CDC</EncryptedPassword>
     <HostName></HostName>
     <PortNO></PortNO>
     <DBName></DBName>
@@ -53,7 +53,7 @@
     <DriverClass></DriverClass>
     <URL></URL>
     <UserName></UserName>
-    <Password></Password>
+    <EncryptedPassword>32F3ACE632ECEBAFB24DCAF99A8C6CDC</EncryptedPassword>
     <HostName></HostName>
     <PortNO></PortNO>
     <DBName></DBName>
@@ -68,7 +68,7 @@
     <DriverClass></DriverClass>
     <URL></URL>
     <UserName></UserName>
-    <Password></Password>
+    <EncryptedPassword>32F3ACE632ECEBAFB24DCAF99A8C6CDC</EncryptedPassword>
     <HostName></HostName>
     <PortNO></PortNO>
     <DBName></DBName>
@@ -83,7 +83,7 @@
     <DriverClass></DriverClass>
     <URL></URL>
     <UserName></UserName>
-    <Password></Password>
+    <EncryptedPassword>32F3ACE632ECEBAFB24DCAF99A8C6CDC</EncryptedPassword>
     <HostName></HostName>
     <PortNO></PortNO>
     <DBName></DBName>
@@ -98,7 +98,7 @@
     <DriverClass></DriverClass>
     <URL></URL>
     <UserName></UserName>
-    <Password></Password>
+    <EncryptedPassword>32F3ACE632ECEBAFB24DCAF99A8C6CDC</EncryptedPassword>
     <HostName></HostName>
     <PortNO></PortNO>
     <DBName></DBName>
@@ -113,7 +113,7 @@
     <DriverClass></DriverClass>
     <URL></URL>
     <UserName></UserName>
-    <Password></Password>
+    <EncryptedPassword>32F3ACE632ECEBAFB24DCAF99A8C6CDC</EncryptedPassword>
     <HostName></HostName>
     <PortNO></PortNO>
     <DBName></DBName>
@@ -128,7 +128,7 @@
     <DriverClass></DriverClass>
     <URL></URL>
     <UserName></UserName>
-    <Password></Password>
+    <EncryptedPassword>32F3ACE632ECEBAFB24DCAF99A8C6CDC</EncryptedPassword>
     <HostName></HostName>
     <PortNO></PortNO>
     <DBName></DBName>
@@ -143,7 +143,7 @@
     <DriverClass></DriverClass>
     <URL></URL>
     <UserName></UserName>
-    <Password></Password>
+    <EncryptedPassword>32F3ACE632ECEBAFB24DCAF99A8C6CDC</EncryptedPassword>
     <HostName></HostName>
     <PortNO></PortNO>
     <DBName></DBName>
@@ -158,7 +158,7 @@
     <DriverClass></DriverClass>
     <URL></URL>
     <UserName></UserName>
-    <Password></Password>
+    <EncryptedPassword>32F3ACE632ECEBAFB24DCAF99A8C6CDC</EncryptedPassword>
     <HostName></HostName>
     <PortNO></PortNO>
     <DBName></DBName>
@@ -173,7 +173,7 @@
     <DriverClass></DriverClass>
     <URL></URL>
     <UserName></UserName>
-    <Password></Password>
+    <EncryptedPassword>32F3ACE632ECEBAFB24DCAF99A8C6CDC</EncryptedPassword>
     <HostName></HostName>
     <PortNO></PortNO>
     <DBName></DBName>
@@ -188,7 +188,7 @@
     <DriverClass></DriverClass>
     <URL></URL>
     <UserName></UserName>
-    <Password></Password>
+    <EncryptedPassword>32F3ACE632ECEBAFB24DCAF99A8C6CDC</EncryptedPassword>
     <HostName></HostName>
     <PortNO></PortNO>
     <DBName></DBName>
@@ -203,7 +203,7 @@
     <DriverClass></DriverClass>
     <URL></URL>
     <UserName></UserName>
-    <Password></Password>
+    <EncryptedPassword>32F3ACE632ECEBAFB24DCAF99A8C6CDC</EncryptedPassword>
     <HostName></HostName>
     <PortNO></PortNO>
     <DBName></DBName>
@@ -218,7 +218,7 @@
     <DriverClass></DriverClass>
     <URL></URL>
     <UserName></UserName>
-    <Password></Password>
+    <EncryptedPassword>32F3ACE632ECEBAFB24DCAF99A8C6CDC</EncryptedPassword>
     <HostName></HostName>
     <PortNO></PortNO>
     <DBName></DBName>
@@ -233,7 +233,7 @@
     <DriverClass></DriverClass>
     <URL></URL>
     <UserName></UserName>
-    <Password></Password>
+    <EncryptedPassword>32F3ACE632ECEBAFB24DCAF99A8C6CDC</EncryptedPassword>
     <HostName></HostName>
     <PortNO></PortNO>
     <DBName></DBName>
@@ -248,10 +248,25 @@
     <DriverClass>com.mysql.jdbc.Driver</DriverClass>
     <URL>jdbc:mysql://localhost:3306/test</URL>
     <UserName>root</UserName>
-    <Password>root</Password>
+    <EncryptedPassword>32F3ACE632ECEBAFB24DCAF99A8C6CDC</EncryptedPassword>
     <HostName>localhost</HostName>
     <PortNO>3306</PortNO>
     <DBName>test</DBName>
+    <ServiceName></ServiceName>
+    <ServerName></ServerName>
+    <SelectedForm>true</SelectedForm>
+  </Setting>
+  <Setting type="33554432">
+    <Driver></Driver>
+    <DriverFiles></DriverFiles>
+    <Dialect></Dialect>
+    <DriverClass></DriverClass>
+    <URL></URL>
+    <UserName></UserName>
+    <EncryptedPassword>32F3ACE632ECEBAFB24DCAF99A8C6CDC</EncryptedPassword>
+    <HostName></HostName>
+    <PortNO></PortNO>
+    <DBName></DBName>
     <ServiceName></ServiceName>
     <ServerName></ServerName>
     <SelectedForm>true</SelectedForm>
@@ -263,7 +278,22 @@
     <DriverClass></DriverClass>
     <URL></URL>
     <UserName></UserName>
-    <Password></Password>
+    <EncryptedPassword>32F3ACE632ECEBAFB24DCAF99A8C6CDC</EncryptedPassword>
+    <HostName></HostName>
+    <PortNO></PortNO>
+    <DBName></DBName>
+    <ServiceName></ServiceName>
+    <ServerName></ServerName>
+    <SelectedForm>true</SelectedForm>
+  </Setting>
+  <Setting type="16777216">
+    <Driver></Driver>
+    <DriverFiles></DriverFiles>
+    <Dialect></Dialect>
+    <DriverClass></DriverClass>
+    <URL></URL>
+    <UserName></UserName>
+    <EncryptedPassword>32F3ACE632ECEBAFB24DCAF99A8C6CDC</EncryptedPassword>
     <HostName></HostName>
     <PortNO></PortNO>
     <DBName></DBName>
@@ -273,12 +303,12 @@
   </Setting>
   <Setting type="2">
     <Driver>MySQL5 (Connector/J Driver)</Driver>
-    <DriverFiles>&lt;&lt;MySQL Connector/J 5.1.33&gt;&gt;</DriverFiles>
+    <DriverFiles>C:\Users\Administrator\eclipse-workspace\citas2020\src\mysql-connector-java-8.0.22\mysql-connector-java-8.0.22\mysql-connector-java-8.0.22.jar</DriverFiles>
     <Dialect>org.hibernate.dialect.MySQL5InnoDBDialect</Dialect>
     <DriverClass>com.mysql.jdbc.Driver</DriverClass>
     <URL>jdbc:mysql://localhost:3306/test</URL>
     <UserName>root</UserName>
-    <Password></Password>
+    <EncryptedPassword>32F3ACE632ECEBAFB24DCAF99A8C6CDC</EncryptedPassword>
     <HostName>localhost</HostName>
     <PortNO>3306</PortNO>
     <DBName>test</DBName>
