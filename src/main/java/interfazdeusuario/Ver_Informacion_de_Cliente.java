@@ -1,17 +1,31 @@
 package interfazdeusuario;
 
-public class Ver_Informacion_de_Cliente {
-	public Ver_Citas _unnamed_Ver_Citas_;
+import com.vaadin.flow.component.ComponentEvent;
+import com.vaadin.flow.component.ComponentEventListener;
+
+import vistas.VistaVerInformacionCliente;
+
+public class Ver_Informacion_de_Cliente extends VistaVerInformacionCliente {
 
 	public Ver_Informacion_de_Cliente() {
-		throw new UnsupportedOperationException();
+		Inicializar();
+		this.getVaadinButton().addClickListener(new ComponentEventListener() {
+			 
+
+			@Override
+			public void onComponentEvent(ComponentEvent event) {
+				// TODO Auto-generated method stub
+				 cerrar();
+			}
+		});
+		
 	}
 
 	void Inicializar() {
-		throw new UnsupportedOperationException();
+		setVisible(false);
 	}
 
 	void cerrar() {
-		throw new UnsupportedOperationException();
+		setVisible(false);
 	}
 }

@@ -1,22 +1,57 @@
 package interfazdeusuario;
 
+import java.util.Optional;
+
+import com.vaadin.flow.component.ComponentEvent;
+import com.vaadin.flow.component.ComponentEventListener;
+import com.vaadin.flow.component.notification.Notification;
+
+import basededatos.Cita_Activa;
+import bds.Bd_Principal;
+import bds.iAdministrador;
+ 
+
+ 
+
 public class Dar_de_Baja_Cita extends Ver_Citas {
 	
-	 
+	iAdministrador adm = new Bd_Principal();
 
 	public Dar_de_Baja_Cita() {
 		 
-		 
-		this.getDarBajaACita().setVisible(true);
+		Inicializar();
+		this.getDarBajaACita().addClickListener(new ComponentEventListener() {
+
+			 
+
+			@Override
+			public void onComponentEvent(ComponentEvent event) {
+				// TODO Auto-generated method stub
+				darDeBajaCita();
+				
+			}
+		});
+		
 		
 	}
 
 	void Inicializar() {
-		throw new UnsupportedOperationException();
+		this.getDarBajaACita().setVisible(true);
 	}
 
 	void darDeBajaCita() {
-		throw new UnsupportedOperationException();
+		if (this.getTablapendientes().getSelectedItems().size() > 0) {
+
+			Cita_Activa cita = (Cita_Activa) this.getTablapendientes().asSingleSelect().getValue();
+			 
+				Integer id = cita.getID();
+
+				adm.Baja_Cita_Activa(id);
+			 
+
+		} else {
+			Notification.show("Seleccione una cita" );
+		}
 	}
 
 	 

@@ -1,6 +1,9 @@
 package vistas;
 
 import com.vaadin.flow.templatemodel.TemplateModel;
+
+import basededatos.Asunto;
+
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
@@ -23,7 +26,7 @@ public class VistaPonerAsunto extends PolymerTemplate<VistaPonerAsunto.VistaPone
     @Id("vaadinVerticalLayout")
 	private Element vaadinVerticalLayout;
 	@Id("seleccionAsunto")
-	private ComboBox<String> seleccionAsunto;
+	private ComboBox<Asunto> seleccionAsunto;
 	@Id("nuevioAsunto")
 	private Button nuevioAsunto;
 	@Id("introduzcaElAsunto")
@@ -51,11 +54,11 @@ public class VistaPonerAsunto extends PolymerTemplate<VistaPonerAsunto.VistaPone
 		this.vaadinVerticalLayout = vaadinVerticalLayout;
 	}
 
-	public ComboBox<String> getSeleccionAsunto() {
+	public ComboBox<Asunto> getSeleccionAsunto() {
 		return seleccionAsunto;
 	}
 
-	public void setSeleccionAsunto(ComboBox<String> seleccionAsunto) {
+	public void setSeleccionAsunto(ComboBox<Asunto> seleccionAsunto) {
 		this.seleccionAsunto = seleccionAsunto;
 	}
 

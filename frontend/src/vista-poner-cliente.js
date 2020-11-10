@@ -18,9 +18,11 @@ class VistaPonerCliente extends PolymerElement {
 <vaadin-vertical-layout style="width: 100%; height: 100%;" id="vaadinVerticalLayout">
  <vaadin-combo-box id="seleccionCliente" style="align-self: stretch;"></vaadin-combo-box>
  <vaadin-button theme="primary" id="nuevo" style="align-self: stretch;">
-  Nuevo Cliente 
+   Nuevo Cliente 
  </vaadin-button>
  <vaadin-text-field label="Introduzca el nombre del cliente" placeholder="escriba..." id="nuevoCliente" style="align-self: stretch;"></vaadin-text-field>
+ <vaadin-text-field label="Introduzca la direccion del cliente" placeholder="escriba--" id="nuevaDireccion" style="align-self: stretch;"></vaadin-text-field>
+ <vaadin-text-field label="Introduzca el telefono del cliente" placeholder="escriba..." id="nuevoTelefono" style="align-self: stretch;"></vaadin-text-field>
 </vaadin-vertical-layout>
 `;
     }

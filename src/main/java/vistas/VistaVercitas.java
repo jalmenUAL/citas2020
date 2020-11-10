@@ -2,6 +2,9 @@ package vistas;
 
 import com.vaadin.flow.templatemodel.TemplateModel;
 
+import basededatos.Cita_Activa;
+import basededatos.Cita_Realizada;
+
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
@@ -10,6 +13,7 @@ import com.vaadin.flow.component.polymertemplate.Id;
 import com.vaadin.flow.dom.Element;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.datepicker.DatePicker;
+import com.vaadin.flow.component.grid.Grid.Column;
 
 /**
  * A Designer generated component for the vista-vercitas template.
@@ -23,8 +27,8 @@ public class VistaVercitas extends PolymerTemplate<VistaVercitas.VistaVercitasMo
 
     @Id("vaadinVerticalLayout")
 	private Element vaadinVerticalLayout;
-	@Id("tabla")
-	private Grid tabla;
+	@Id("tablapendientes")
+	private Grid<Cita_Activa> tablapendientes;
 	@Id("realizar")
 	private Button realizar;
 	@Id("posponer")
@@ -37,6 +41,8 @@ public class VistaVercitas extends PolymerTemplate<VistaVercitas.VistaVercitasMo
 	private Button verInformacionCliente;
 	@Id("darBajaACita")
 	private Button darBajaACita;
+	@Id("tablarealizadas")
+	private Grid<Cita_Realizada> tablarealizadas;
 	/**
      * Creates a new VistaVercitas.
      */
@@ -61,14 +67,7 @@ public class VistaVercitas extends PolymerTemplate<VistaVercitas.VistaVercitasMo
 		this.vaadinVerticalLayout = vaadinVerticalLayout;
 	}
 
-	public Grid getTabla() {
-		return tabla;
-	}
-
-	public void setTabla(Grid tabla) {
-		this.tabla = tabla;
-	}
-
+	 
 	public Button getRealizar() {
 		return realizar;
 	}
@@ -117,6 +116,22 @@ public class VistaVercitas extends PolymerTemplate<VistaVercitas.VistaVercitasMo
 
 	public void setDarBajaACita(Button darBajaACita) {
 		this.darBajaACita = darBajaACita;
+	}
+
+	public Grid getTablapendientes() {
+		return tablapendientes;
+	}
+
+	public void setTablapendientes(Grid tablapendientes) {
+		this.tablapendientes = tablapendientes;
+	}
+
+	public Grid getTablarealizadas() {
+		return tablarealizadas;
+	}
+
+	public void setTablarealizadas(Grid tablarealizadas) {
+		this.tablarealizadas = tablarealizadas;
 	}
 
 	 

@@ -1,6 +1,9 @@
 package vistas;
 
 import com.vaadin.flow.templatemodel.TemplateModel;
+
+import basededatos.Cliente;
+
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
@@ -22,13 +25,16 @@ public class VistaPonerCliente extends PolymerTemplate<VistaPonerCliente.VistaPo
 
     @Id("vaadinVerticalLayout")
 	private Element vaadinVerticalLayout;
-	@Id("seleccionCliente")
-	private ComboBox<String> seleccionCliente;
 	@Id("nuevo")
 	private Button nuevo;
 	@Id("nuevoCliente")
 	private TextField nuevoCliente;
-
+	@Id("nuevaDireccion")
+	private TextField nuevaDireccion;
+	@Id("nuevoTelefono")
+	private TextField nuevoTelefono;
+	@Id("seleccionCliente")
+	private ComboBox<Cliente> seleccionCliente;
 	/**
      * Creates a new VistaPonerCliente.
      */
@@ -51,11 +57,11 @@ public class VistaPonerCliente extends PolymerTemplate<VistaPonerCliente.VistaPo
 		this.vaadinVerticalLayout = vaadinVerticalLayout;
 	}
 
-	public ComboBox<String> getSeleccionCliente() {
+	public ComboBox<Cliente> getSeleccionCliente() {
 		return seleccionCliente;
 	}
 
-	public void setSeleccionCliente(ComboBox<String> seleccionCliente) {
+	public void setSeleccionCliente(ComboBox<Cliente> seleccionCliente) {
 		this.seleccionCliente = seleccionCliente;
 	}
 
@@ -73,5 +79,21 @@ public class VistaPonerCliente extends PolymerTemplate<VistaPonerCliente.VistaPo
 
 	public void setNuevoCliente(TextField nuevoCliente) {
 		this.nuevoCliente = nuevoCliente;
+	}
+
+	public TextField getNuevaDireccion() {
+		return nuevaDireccion;
+	}
+
+	public void setNuevaDireccion(TextField nuevaDireccion) {
+		this.nuevaDireccion = nuevaDireccion;
+	}
+
+	public TextField getNuevoTelefono() {
+		return nuevoTelefono;
+	}
+
+	public void setNuevoTelefono(TextField nuevoTelefono) {
+		this.nuevoTelefono = nuevoTelefono;
 	}
 }

@@ -1,5 +1,9 @@
 package interfazdeusuario;
 
+import com.vaadin.flow.component.ComponentEvent;
+import com.vaadin.flow.component.ComponentEventListener;
+ 
+
 import vistas.VistaGestionarCitas;
 
 public class Gestionar_Citas extends VistaGestionarCitas {
@@ -12,21 +16,43 @@ public class Gestionar_Citas extends VistaGestionarCitas {
 
 	public Gestionar_Citas() {
 		
-		this.getVaadinHorizontalLayout().add(_vc);
-		this.getVaadinHorizontalLayout().add(_da);
-		this.getVaadinHorizontalLayout().add(_db);
+		Inicializar();
+		
+	    _da.getDarDeAta().addClickListener(new ComponentEventListener() {
+			 
+
+			@Override
+			public void onComponentEvent(ComponentEvent event) {
+				// TODO Auto-generated method stub
+				darDeAltaCitas();
+			}
+		});
+		 
+	    _db.getDarBajaACita().addClickListener(new ComponentEventListener() {
+			 
+
+			@Override
+			public void onComponentEvent(ComponentEvent event) {
+				// TODO Auto-generated method stub
+				darDeBajaCitas();
+			}
+		});
 		
 	}
 
 	void Inicializar() {
-		throw new UnsupportedOperationException();
+		this.getVaadinHorizontalLayout().add(_vc);
+		this.getVaadinHorizontalLayout().add(_da);
+		this.getVaadinHorizontalLayout().add(_db);
 	}
 
 	void darDeAltaCitas() {
-		throw new UnsupportedOperationException();
+		_vc.Cargar_Citas();
+		_db.Cargar_Citas();
 	}
 
 	void darDeBajaCitas() {
-		throw new UnsupportedOperationException();
+		_vc.Cargar_Citas();
+		_db.Cargar_Citas();
 	}
 }

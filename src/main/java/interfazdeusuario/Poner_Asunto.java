@@ -1,23 +1,49 @@
 package interfazdeusuario;
 
+import java.util.List;
+
+import com.vaadin.flow.component.ComponentEvent;
+import com.vaadin.flow.component.ComponentEventListener;
+ 
+
+import basededatos.Asunto;
+import bds.Bd_Principal;
+import bds.iAdministrador;
 import vistas.VistaPonerAsunto;
 
 public class Poner_Asunto extends VistaPonerAsunto {
 	Boolean _asunto = false;
-	 
+	iAdministrador adm = new Bd_Principal();
+	List<Asunto> as = adm.Cargar_Asuntos();
 
 	public Poner_Asunto() {
 		
-		this.getIntroduzcaElAsunto().setVisible(false);
-		 
+		Inicializar();
+		this.getNuevioAsunto().addClickListener(new ComponentEventListener() {
+			 
+
+			@Override
+			public void onComponentEvent(ComponentEvent event) {
+				// TODO Auto-generated method stub
+				nuevoAsunto();
+			}
+		});
 	}
+		
+		 
+	
 
 	void Inicializar() {
-		throw new UnsupportedOperationException();
+		this.getIntroduzcaElAsunto().setVisible(false);	 
+		com.vaadin.flow.component.combobox.ComboBox<Asunto> combo = getSeleccionAsunto();
+		this.getIntroduzcaElAsunto().setVisible(false);
+		combo.setItemLabelGenerator(Asunto::getNombre);
+		combo.setItems(as);
 	}
 
 	void nuevoAsunto() {
-		throw new UnsupportedOperationException();
+		this.getIntroduzcaElAsunto().setVisible(true);
+		_asunto = true;
 	}
 
 	 
