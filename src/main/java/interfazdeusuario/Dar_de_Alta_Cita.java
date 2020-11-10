@@ -66,7 +66,8 @@ public class Dar_de_Alta_Cita extends VistaDarDeAlta {
 				adm.Crear_Cita_Nuevo_Asunto(pf.getFechaCita().getValue(), pa.getIntroduzcaElAsunto().getValue(),
 						cliente.getORMID());
 				pa._asunto = false;
-			} else {
+			} 
+			else {
 				Asunto asunto = pa.getSeleccionAsunto().getValue();
 				Cliente cliente = pcl.getSeleccionCliente().getValue();
 				adm.Crear_Cita(pf.getFechaCita().getValue(), cliente.getORMID(), asunto.getORMID());

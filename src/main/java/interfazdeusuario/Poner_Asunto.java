@@ -17,11 +17,8 @@ public class Poner_Asunto extends VistaPonerAsunto {
 	List<Asunto> as = adm.Cargar_Asuntos();
 
 	public Poner_Asunto() {
-		
 		Inicializar();
 		this.getNuevioAsunto().addClickListener(new ComponentEventListener() {
-			 
-
 			@Override
 			public void onComponentEvent(ComponentEvent event) {
 				// TODO Auto-generated method stub
@@ -35,10 +32,8 @@ public class Poner_Asunto extends VistaPonerAsunto {
 
 	void Inicializar() {
 		this.getIntroduzcaElAsunto().setVisible(false);	 
-		com.vaadin.flow.component.combobox.ComboBox<Asunto> combo = getSeleccionAsunto();
-		this.getIntroduzcaElAsunto().setVisible(false);
-		combo.setItemLabelGenerator(Asunto::getNombre);
-		combo.setItems(as);
+		this.getSeleccionAsunto().setItemLabelGenerator(Asunto::getNombre);
+		this.getSeleccionAsunto().setItems(as);
 	}
 
 	void nuevoAsunto() {

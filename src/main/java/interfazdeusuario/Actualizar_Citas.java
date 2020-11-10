@@ -73,9 +73,11 @@ public class Actualizar_Citas extends Ver_Citas {
 	};
 
 	void PosponerCita() {
-		if (this.getTablapendientes().getSelectedItems().size() > 0) {
+		
+		if (this.getTablapendientes().getSelectedItems().size() > 0) {			
 			this.getCambiarFecha().setVisible(true);
 			this.getNuevaFecha().setVisible(true);
+			
 		} else {
 			Notification.show("Seleccione una cita");
 		}
@@ -86,10 +88,11 @@ public class Actualizar_Citas extends Ver_Citas {
 		Optional<Cita_Activa> item = this.getTablapendientes().getSelectionModel().getFirstSelectedItem();
 
 		item.ifPresent(cita -> {
+		
 			Integer id;
 			id = cita.getID();
 			usu.Cita_Pospuesta(id, this.getNuevaFecha().getValue());
-			Cargar_Citas();
+			Cargar_Citas();	
 			this.getCambiarFecha().setVisible(false);
 			this.getNuevaFecha().setVisible(false);
 		});

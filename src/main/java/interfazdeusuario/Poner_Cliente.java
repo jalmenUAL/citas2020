@@ -17,14 +17,9 @@ public class Poner_Cliente extends VistaPonerCliente {
 	List<Cliente> cl = adm.Cargar_Clientes();
 	 
 
-	public Poner_Cliente() {
-		
-		
-		 
+	public Poner_Cliente() { 
 		Inicializar();
 		this.getNuevo().addClickListener(new ComponentEventListener() {
-			 
-
 			@Override
 			public void onComponentEvent(ComponentEvent event) {
 				// TODO Auto-generated method stub
@@ -35,14 +30,16 @@ public class Poner_Cliente extends VistaPonerCliente {
 
 	void Inicializar() {
 		this.getNuevoCliente().setVisible(false);
-		com.vaadin.flow.component.combobox.ComboBox<Cliente> combo = getSeleccionCliente();
-		this.getNuevoCliente().setVisible(false);
-		combo.setItemLabelGenerator(Cliente::getNombre);
-		combo.setItems(cl);
+		this.getNuevaDireccion().setVisible(false);
+		this.getNuevoTelefono().setVisible(false);
+		this.getSeleccionCliente().setItemLabelGenerator(Cliente::getNombre);
+		this.getSeleccionCliente().setItems(cl);
 	}
 
 	void nuevoCliente() {
 		this.getNuevoCliente().setVisible(true);
+		this.getNuevaDireccion().setVisible(true);
+		this.getNuevoTelefono().setVisible(true);
 		_cliente = true;
 	}
 

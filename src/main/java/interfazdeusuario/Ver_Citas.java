@@ -26,14 +26,11 @@ public class Ver_Citas extends VistaVercitas  {
 
 	public Ver_Citas() {
 		 
-		
 		Inicializar();
 		this.getVaadinVerticalLayout().as(VerticalLayout.class).add(vinfo);
 		vinfo.setVisible(false);
 		Cargar_Citas();
 		this.getVerInformacionCliente().addClickListener(new ComponentEventListener() {
-			 
-
 			@Override
 			public void onComponentEvent(ComponentEvent event) {
 				// TODO Auto-generated method stub
@@ -74,7 +71,6 @@ public class Ver_Citas extends VistaVercitas  {
 			item.ifPresent(cita -> {
 				Integer id;
 				id = cita.getID();
-
 				Cliente cli = adm.Cargar_Informacion_Cliente(id);
 				vinfo.getNombre().setValue(cli.getNombre());
 				vinfo.getDireccion().setValue(cli.getDireccion());
@@ -91,6 +87,7 @@ public class Ver_Citas extends VistaVercitas  {
 		List<Cita_Activa> ca = adm.Cargar_Citas_Pendientes();
 		this.getTablapendientes().removeAllColumns();
 		this.getTablapendientes().setItems(ca);
+		
 		//this.getTablapendientes().addColumn(Cita_Activa -> Cita_Activa.getCliente().getNombre()).setCaption("Ciente");
 		//this.getTablapendientes().addColumn(Cita_Activa -> Cita_Activa.getFecha().getDia()).setCaption("Día");
 		;

@@ -22,8 +22,6 @@ public class Dar_de_Baja_Cita extends Ver_Citas {
 		Inicializar();
 		this.getDarBajaACita().addClickListener(new ComponentEventListener() {
 
-			 
-
 			@Override
 			public void onComponentEvent(ComponentEvent event) {
 				// TODO Auto-generated method stub
