@@ -32,8 +32,9 @@ public class Poner_Cliente extends VistaPonerCliente {
 		this.getNuevoCliente().setVisible(false);
 		this.getNuevaDireccion().setVisible(false);
 		this.getNuevoTelefono().setVisible(false);
-		this.getSeleccionCliente().setItemLabelGenerator(Cliente::getNombre);
+		
 		this.getSeleccionCliente().setItems(cl);
+		this.getSeleccionCliente().setItemLabelGenerator(Cliente::getNombre);
 	}
 
 	void nuevoCliente() {

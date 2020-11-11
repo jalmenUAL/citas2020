@@ -32,9 +32,8 @@ public class Poner_Asunto extends VistaPonerAsunto {
 
 	void Inicializar() {
 		this.getIntroduzcaElAsunto().setVisible(false);	 
-		ComboBox<Asunto> cb = this.getSeleccionAsunto();
-		cb.setItems(as);
-		cb.setItemLabelGenerator(Asunto::getNombre);
+		this.getSeleccionAsunto().setItems(as);
+		this.getSeleccionAsunto().setItemLabelGenerator(Asunto::getNombre);
 		
 	}
 

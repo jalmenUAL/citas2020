@@ -118,19 +118,19 @@ public class VistaVercitas extends PolymerTemplate<VistaVercitas.VistaVercitasMo
 		this.darBajaACita = darBajaACita;
 	}
 
-	public Grid getTablapendientes() {
+	public Grid<Cita_Activa> getTablapendientes() {
 		return tablapendientes;
 	}
 
-	public void setTablapendientes(Grid tablapendientes) {
+	public void setTablapendientes(Grid<Cita_Activa> tablapendientes) {
 		this.tablapendientes = tablapendientes;
 	}
 
-	public Grid getTablarealizadas() {
+	public Grid<Cita_Realizada> getTablarealizadas() {
 		return tablarealizadas;
 	}
 
-	public void setTablarealizadas(Grid tablarealizadas) {
+	public void setTablarealizadas(Grid<Cita_Realizada> tablarealizadas) {
 		this.tablarealizadas = tablarealizadas;
 	}
 

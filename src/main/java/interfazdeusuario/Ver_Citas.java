@@ -67,7 +67,7 @@ public class Ver_Citas extends VistaVercitas  {
 
 		{
 			this.getVaadinVerticalLayout().as(VerticalLayout.class).add(vinfo);
-			Optional<Cita_Activa> item = this.getTablarealizadas().getSelectionModel().getFirstSelectedItem();
+			Optional<Cita_Realizada> item = this.getTablarealizadas().getSelectionModel().getFirstSelectedItem();
 
 			item.ifPresent(cita -> {
 				Integer id;
@@ -85,33 +85,33 @@ public class Ver_Citas extends VistaVercitas  {
 	}
 
 	public void Cargar_Citas() {
+		
 		List<Cita_Activa> ca = adm.Cargar_Citas_Pendientes();
 		this.getTablapendientes().removeAllColumns();
+		 
 		this.getTablapendientes().setItems(ca);
+		this.getTablapendientes().addColumn(Cita_Activa -> Cita_Activa.getCliente().getNombre()).setHeader("Ciente");
+		this.getTablapendientes().addColumn(Cita_Activa -> Cita_Activa.getFecha().getDia()).setHeader("Día");
+		this.getTablapendientes().addColumn(Cita_Activa -> Cita_Activa.getFecha().getMes()).setHeader("Mes");
+		this.getTablapendientes().addColumn(Cita_Activa -> Cita_Activa.getFecha().getAnyo()).setHeader("Año");
+		this.getTablapendientes().addColumn(Cita_Activa -> Cita_Activa.getEs_para().getNombre()).setHeader("Asunto");
 		
-		//this.getTablapendientes().addColumn(Cita_Activa -> Cita_Activa.getCliente().getNombre()).setCaption("Ciente");
-		//this.getTablapendientes().addColumn(Cita_Activa -> Cita_Activa.getFecha().getDia()).setCaption("Día");
-		;
-		//this.getTablapendientes().addColumn(Cita_Activa -> Cita_Activa.getFecha().getMes()).setCaption("Mes");
-		;
-		//this.getTablapendientes().addColumn(Cita_Activa -> Cita_Activa.getFecha().getAnyo()).setCaption("Año");
-		;
-		//this.getTablapendientes().addColumn(Cita_Activa -> Cita_Activa.getEs_para().getNombre()).setCaption("Asunto");
-		;
+		
+		
 
 		List<Cita_Realizada> cr = adm.Cargar_Citas_Realizadas();
 		this.getTablarealizadas().removeAllColumns();
+		
 		this.getTablarealizadas().setItems(cr);
-		//this.getTablarealizadas().addColumn(Cita_Realizada -> Cita_Realizada.getCliente().getNombre()).setCaption("Cliente");
-		;
-		//this.getTablarealizadas().addColumn(Cita_Realizada -> Cita_Realizada.getFecha().getDia()).setCaption("Día");
-		;
-		//this.getTablarealizadas().addColumn(Cita_Realizada -> Cita_Realizada.getFecha().getMes()).setCaption("Mes");
-		;
-		//this.getTablarealizadas().addColumn(Cita_Realizada -> Cita_Realizada.getFecha().getAnyo()).setCaption("Añoo");
-		;
-		//this.getTablarealizadas().addColumn(Cita_Realizada -> Cita_Realizada.getEs_para().getNombre()).setCaption("Asunto");
-		;
+		this.getTablarealizadas().addColumn(Cita_Realizada -> Cita_Realizada.getCliente().getNombre()).setHeader("Cliente");
+		this.getTablarealizadas().addColumn(Cita_Realizada -> Cita_Realizada.getFecha().getDia()).setHeader("Día");
+		this.getTablarealizadas().addColumn(Cita_Realizada -> Cita_Realizada.getFecha().getMes()).setHeader("Mes");
+		this.getTablarealizadas().addColumn(Cita_Realizada -> Cita_Realizada.getFecha().getAnyo()).setHeader("Año");
+		this.getTablarealizadas().addColumn(Cita_Realizada -> Cita_Realizada.getEs_para().getNombre()).setHeader("Asunto");
+		
+		
+
+		
 	}
 	
 	
