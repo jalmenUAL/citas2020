@@ -154,20 +154,8 @@
             <artifactId>webdrivermanager</artifactId>
             <scope>test</scope>
         </dependency>
-   <!--        <dependency>
-    <groupId>jesus</groupId>
-    <artifactId>orm</artifactId>
-    <scope>system</scope>
-    <systemPath>C:\Users\Administrator\eclipse-workspace\citas2020\src\lib\orm.jar</systemPath>
-</dependency>
-<dependency>
-    <groupId>jesus</groupId>
-    <artifactId>mysql</artifactId>
-    <scope>system</scope>
-    <systemPath>C:\Users\Administrator\eclipse-workspace\citas2020\src\lib\mysql-connector-java-8.0.22.jar</systemPath>
-</dependency> -->
-<!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->
-
+    
+ 
 
 <dependency>
         <groupId>javax.el</groupId>

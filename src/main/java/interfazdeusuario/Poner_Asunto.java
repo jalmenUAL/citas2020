@@ -32,7 +32,7 @@ public class Poner_Asunto extends VistaPonerAsunto {
 
 	void Inicializar() {
 		this.getIntroduzcaElAsunto().setVisible(false);	 
-		this.getSeleccionAsunto().setItemLabelGenerator(Asunto::getNombre);
+		//this.getSeleccionAsunto().setItemLabelGenerator();
 		this.getSeleccionAsunto().setItems(as);
 	}
 

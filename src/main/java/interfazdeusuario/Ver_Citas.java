@@ -27,9 +27,6 @@ public class Ver_Citas extends VistaVercitas  {
 	public Ver_Citas() {
 		 
 		Inicializar();
-		this.getVaadinVerticalLayout().as(VerticalLayout.class).add(vinfo);
-		vinfo.setVisible(false);
-		Cargar_Citas();
 		this.getVerInformacionCliente().addClickListener(new ComponentEventListener() {
 			@Override
 			public void onComponentEvent(ComponentEvent event) {
@@ -40,18 +37,22 @@ public class Ver_Citas extends VistaVercitas  {
 	}
 
 	void Inicializar() {
+		
+		Cargar_Citas();
 		this.getPosponer().setVisible(false);
 		this.getRealizar().setVisible(false);
 		this.getCambiarFecha().setVisible(false);
 		this.getNuevaFecha().setVisible(false);
 		this.getDarBajaACita().setVisible(false);
+		 
 	}
 
 	void verInformacionDeCliente() {
+			
 		if (this.getTablapendientes().getSelectedItems().size() > 0)
 
 		{
-			vinfo.setVisible(true);
+			this.getVaadinVerticalLayout().as(VerticalLayout.class).add(vinfo);
 			Optional<Cita_Activa> item = this.getTablapendientes().getSelectionModel().getFirstSelectedItem();
 			item.ifPresent(cita -> {
 				Integer id = cita.getID();
@@ -65,7 +66,7 @@ public class Ver_Citas extends VistaVercitas  {
 		} else if (this.getTablarealizadas().getSelectedItems().size() > 0)
 
 		{
-			vinfo.setVisible(true);
+			this.getVaadinVerticalLayout().as(VerticalLayout.class).add(vinfo);
 			Optional<Cita_Activa> item = this.getTablarealizadas().getSelectionModel().getFirstSelectedItem();
 
 			item.ifPresent(cita -> {

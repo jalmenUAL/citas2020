@@ -16,6 +16,7 @@ public class Actualizar_Citas extends Ver_Citas {
 	
 	public Actualizar_Citas() {
 		
+		 
 		
 		Inicializar();
 
@@ -52,6 +53,10 @@ public class Actualizar_Citas extends Ver_Citas {
 	}
 
 	void Inicializar() {
+		Cargar_Citas();
+		this.getCambiarFecha().setVisible(false);
+		this.getNuevaFecha().setVisible(false);
+		this.getDarBajaACita().setVisible(false);
 		this.getPosponer().setVisible(true);
 		this.getRealizar().setVisible(true);
 	}

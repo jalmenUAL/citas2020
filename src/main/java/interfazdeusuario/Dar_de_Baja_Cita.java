@@ -34,7 +34,13 @@ public class Dar_de_Baja_Cita extends Ver_Citas {
 	}
 
 	void Inicializar() {
+		Cargar_Citas();
+		this.getPosponer().setVisible(false);
+		this.getRealizar().setVisible(false);
+		this.getCambiarFecha().setVisible(false);
+		this.getNuevaFecha().setVisible(false);
 		this.getDarBajaACita().setVisible(true);
+		
 	}
 
 	void darDeBajaCita() {
