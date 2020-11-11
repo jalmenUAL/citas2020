@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.vaadin.flow.component.ComponentEvent;
 import com.vaadin.flow.component.ComponentEventListener;
- 
+import com.vaadin.flow.component.combobox.ComboBox;
 
 import basededatos.Asunto;
 import bds.Bd_Principal;
@@ -32,8 +32,10 @@ public class Poner_Asunto extends VistaPonerAsunto {
 
 	void Inicializar() {
 		this.getIntroduzcaElAsunto().setVisible(false);	 
-		//this.getSeleccionAsunto().setItemLabelGenerator();
-		this.getSeleccionAsunto().setItems(as);
+		ComboBox<Asunto> cb = this.getSeleccionAsunto();
+		cb.setItems(as);
+		cb.setItemLabelGenerator(Asunto::getNombre);
+		
 	}
 
 	void nuevoAsunto() {
