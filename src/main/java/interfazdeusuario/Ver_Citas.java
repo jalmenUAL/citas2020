@@ -45,6 +45,7 @@ public class Ver_Citas extends VistaVercitas  {
 		this.getNuevaFecha().setVisible(false);
 		this.getDarBajaACita().setVisible(false);
 		 
+		 
 	}
 
 	void verInformacionDeCliente() {
@@ -52,9 +53,11 @@ public class Ver_Citas extends VistaVercitas  {
 		if (this.getTablapendientes().getSelectedItems().size() > 0)
 
 		{
-			this.getVaadinVerticalLayout().as(VerticalLayout.class).add(vinfo);
+			
 			Optional<Cita_Activa> item = this.getTablapendientes().getSelectionModel().getFirstSelectedItem();
+			
 			item.ifPresent(cita -> {
+				
 				Integer id = cita.getID();
 				Cliente cli = adm.Cargar_Informacion_Cliente(id);
 				vinfo.getNombre().setValue(cli.getNombre());
@@ -62,11 +65,12 @@ public class Ver_Citas extends VistaVercitas  {
 				vinfo.getTelefono().setValue(cli.getTelefono());
 				this.getTablapendientes().getSelectionModel().deselectAll();
 			});
+			this.getVaadinVerticalLayout().as(VerticalLayout.class).add(vinfo);
 
 		} else if (this.getTablarealizadas().getSelectedItems().size() > 0)
 
 		{
-			this.getVaadinVerticalLayout().as(VerticalLayout.class).add(vinfo);
+			
 			Optional<Cita_Realizada> item = this.getTablarealizadas().getSelectionModel().getFirstSelectedItem();
 
 			item.ifPresent(cita -> {
@@ -78,6 +82,7 @@ public class Ver_Citas extends VistaVercitas  {
 				vinfo.getTelefono().setValue(cli.getTelefono());
 				this.getTablarealizadas().getSelectionModel().deselectAll();
 			});
+			this.getVaadinVerticalLayout().as(VerticalLayout.class).add(vinfo);
 
 		} else {
 			Notification.show("Seleccione una cita");
@@ -89,26 +94,28 @@ public class Ver_Citas extends VistaVercitas  {
 		List<Cita_Activa> ca = adm.Cargar_Citas_Pendientes();
 		this.getTablapendientes().removeAllColumns();
 		 
-		this.getTablapendientes().setItems(ca);
+		
+		 
+		
 		this.getTablapendientes().addColumn(Cita_Activa -> Cita_Activa.getCliente().getNombre()).setHeader("Ciente");
 		this.getTablapendientes().addColumn(Cita_Activa -> Cita_Activa.getFecha().getDia()).setHeader("Día");
 		this.getTablapendientes().addColumn(Cita_Activa -> Cita_Activa.getFecha().getMes()).setHeader("Mes");
 		this.getTablapendientes().addColumn(Cita_Activa -> Cita_Activa.getFecha().getAnyo()).setHeader("Año");
 		this.getTablapendientes().addColumn(Cita_Activa -> Cita_Activa.getEs_para().getNombre()).setHeader("Asunto");
-		
+		this.getTablapendientes().setItems(ca);
 		
 		
 
 		List<Cita_Realizada> cr = adm.Cargar_Citas_Realizadas();
 		this.getTablarealizadas().removeAllColumns();
 		
-		this.getTablarealizadas().setItems(cr);
 		this.getTablarealizadas().addColumn(Cita_Realizada -> Cita_Realizada.getCliente().getNombre()).setHeader("Cliente");
 		this.getTablarealizadas().addColumn(Cita_Realizada -> Cita_Realizada.getFecha().getDia()).setHeader("Día");
 		this.getTablarealizadas().addColumn(Cita_Realizada -> Cita_Realizada.getFecha().getMes()).setHeader("Mes");
 		this.getTablarealizadas().addColumn(Cita_Realizada -> Cita_Realizada.getFecha().getAnyo()).setHeader("Año");
 		this.getTablarealizadas().addColumn(Cita_Realizada -> Cita_Realizada.getEs_para().getNombre()).setHeader("Asunto");
-		
+		this.getTablarealizadas().setItems(cr);
+
 		
 
 		

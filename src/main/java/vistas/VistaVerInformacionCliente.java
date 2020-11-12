@@ -45,7 +45,6 @@ public class VistaVerInformacionCliente extends PolymerTemplate<VistaVerInformac
 	private TextField telefono;
 	@Id("vaadinButton")
 	private Button vaadinButton;
-
 	/**
      * Creates a new VistaVerInformacionCliente.
      */

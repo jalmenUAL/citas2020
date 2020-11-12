@@ -44,6 +44,7 @@ public class Gestionar_Citas extends VistaGestionarCitas {
 		this.getVaadinHorizontalLayout().add(_vc);
 		this.getVaadinHorizontalLayout().add(_da);
 		this.getVaadinHorizontalLayout().add(_db);
+		 
 	}
 
 	void darDeAltaCitas() {
