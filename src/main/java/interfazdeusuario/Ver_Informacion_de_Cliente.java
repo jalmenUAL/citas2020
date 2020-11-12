@@ -22,7 +22,7 @@ public class Ver_Informacion_de_Cliente extends VistaVerInformacionCliente {
 	}
 
 	void Inicializar() {
-		setVisible(false);
+		setVisible(true);
 	}
 
 	void cerrar() {

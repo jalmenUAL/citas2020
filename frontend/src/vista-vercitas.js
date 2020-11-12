@@ -17,8 +17,8 @@ class VistaVercitas extends PolymerElement {
                 }
             </style>
 <vaadin-vertical-layout style="width: 100%; height: 100%;" id="vaadinVerticalLayout">
- <vaadin-grid items="[[items]]" id="tablapendientes"></vaadin-grid>
- <vaadin-grid items="[[items]]" id="tablarealizadas"></vaadin-grid>
+ <vaadin-grid items="[[items]]" id="tablapendientes" style="width: 100%;"></vaadin-grid>
+ <vaadin-grid items="[[items]]" id="tablarealizadas" style="width: 100%;"></vaadin-grid>
  <vaadin-button id="verInformacionCliente" style="align-self: stretch;">
    Ver Informacion del Cliente 
  </vaadin-button>

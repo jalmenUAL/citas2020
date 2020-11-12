@@ -13,23 +13,24 @@ class VistaVerInformacionCliente extends PolymerElement {
                 :host {
                     display: block;
                     height: 100%;
+                    width: 100%;
                 }
             </style>
 <vaadin-form-layout id="vaadinFormLayout" style="width: 100%; height: 100%;">
  <vaadin-form-layout id="vaadinFormLayout1" style="width: 100%;">
-  <vaadin-form-item id="vaadinFormItem">
+  <vaadin-form-item id="vaadinFormItem" style="width: 100%;">
    <label slot="label" id="label">Nombre </label>
    <vaadin-text-field class="full-width" required id="nombre" style="flex-grow: 0;" has-value></vaadin-text-field>
   </vaadin-form-item>
-  <vaadin-form-item id="vaadinFormItem1">
+  <vaadin-form-item id="vaadinFormItem1" style="width: 100%;">
    <label slot="label" id="label1">Dirección </label>
    <vaadin-text-field class="full-width" required id="direccion" has-value></vaadin-text-field>
   </vaadin-form-item>
-  <vaadin-form-item id="vaadinFormItem2">
+  <vaadin-form-item id="vaadinFormItem2" style="width: 100%;">
    <label slot="label" id="label2">Teléfono </label>
    <vaadin-text-field class="full-width" required id="telefono" has-value></vaadin-text-field>
   </vaadin-form-item>
-  <vaadin-button theme="primary" id="vaadinButton">
+  <vaadin-button theme="primary" id="vaadinButton" style="width: 100%;">
     OK 
   </vaadin-button>
  </vaadin-form-layout>
