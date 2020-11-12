@@ -6,9 +6,9 @@ import com.vaadin.flow.component.ComponentEvent;
 import com.vaadin.flow.component.ComponentEventListener;
 import com.vaadin.flow.component.notification.Notification;
 
+import basededatos.Cita_Activa;
 import bds.Bd_Principal;
 import bds.iUsuario;
-import basededatos.Cita_Activa;
 
 public class Actualizar_Citas extends Ver_Citas {
 	 

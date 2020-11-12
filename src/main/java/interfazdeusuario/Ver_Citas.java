@@ -9,14 +9,12 @@ import com.vaadin.flow.component.ComponentEvent;
 import com.vaadin.flow.component.ComponentEventListener;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
-import com.vaadin.flow.component.textfield.TextField;
 
 import basededatos.Cita_Activa;
 import basededatos.Cita_Realizada;
 import basededatos.Cliente;
 import bds.Bd_Principal;
 import bds.iAdministrador;
- 
 import vistas.VistaVercitas;
 
 public class Ver_Citas extends VistaVercitas  {

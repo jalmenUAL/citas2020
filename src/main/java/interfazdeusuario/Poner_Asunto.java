@@ -4,7 +4,6 @@ import java.util.List;
 
 import com.vaadin.flow.component.ComponentEvent;
 import com.vaadin.flow.component.ComponentEventListener;
-import com.vaadin.flow.component.combobox.ComboBox;
 
 import basededatos.Asunto;
 import bds.Bd_Principal;

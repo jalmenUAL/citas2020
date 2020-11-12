@@ -1,7 +1,5 @@
 package interfazdeusuario;
 
-import java.util.Optional;
-
 import com.vaadin.flow.component.ComponentEvent;
 import com.vaadin.flow.component.ComponentEventListener;
 import com.vaadin.flow.component.notification.Notification;

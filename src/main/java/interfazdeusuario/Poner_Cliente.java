@@ -4,7 +4,6 @@ import java.util.List;
 
 import com.vaadin.flow.component.ComponentEvent;
 import com.vaadin.flow.component.ComponentEventListener;
- 
 
 import basededatos.Cliente;
 import bds.Bd_Principal;
