@@ -17,7 +17,7 @@ public class Dar_de_Alta_Cita extends VistaDarDeAlta {
 	Poner_Asunto pa = new Poner_Asunto();
 	Poner_Cliente pcl = new Poner_Cliente();
 	Poner_Fecha pf = new Poner_Fecha();
-	 
+	
 
 	public Dar_de_Alta_Cita() {
 		

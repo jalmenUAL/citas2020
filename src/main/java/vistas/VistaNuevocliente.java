@@ -20,8 +20,10 @@ public class VistaNuevocliente extends PolymerTemplate<VistaNuevocliente.VistaNu
 
     @Id("vaadinVerticalLayout")
 	private Element vaadinVerticalLayout;
-	@Id("nuevoCliente")
+	@Id("nuevoNombre")
 	private TextField nuevoCliente;
+	@Id("Direccion")
+	private TextField direccion;
 
 	/**
      * Creates a new VistaNuevocliente.
@@ -36,4 +38,28 @@ public class VistaNuevocliente extends PolymerTemplate<VistaNuevocliente.VistaNu
     public interface VistaNuevoclienteModel extends TemplateModel {
         // Add setters and getters for template properties here.
     }
+
+	public Element getVaadinVerticalLayout() {
+		return vaadinVerticalLayout;
+	}
+
+	public void setVaadinVerticalLayout(Element vaadinVerticalLayout) {
+		this.vaadinVerticalLayout = vaadinVerticalLayout;
+	}
+
+	public TextField getNuevoCliente() {
+		return nuevoCliente;
+	}
+
+	public void setNuevoCliente(TextField nuevoCliente) {
+		this.nuevoCliente = nuevoCliente;
+	}
+
+	public TextField getDireccion() {
+		return direccion;
+	}
+
+	public void setDireccion(TextField direccion) {
+		this.direccion = direccion;
+	}
 }

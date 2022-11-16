@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.vaadin.flow.component.ComponentEvent;
 import com.vaadin.flow.component.ComponentEventListener;
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 import basededatos.Cliente;
 import bds.Bd_Principal;
@@ -14,11 +15,11 @@ public class Poner_Cliente extends VistaPonerCliente {
 	Boolean _cliente = false;
 	iAdministrador adm = new Bd_Principal();
 	List<Cliente> cl = adm.Cargar_Clientes();
-	 
+	Nuevo_Cliente ncl = new Nuevo_Cliente();
 
 	public Poner_Cliente() { 
 		Inicializar();
-		this.getNuevo().addClickListener(new ComponentEventListener() {
+		this.getBotonNuevoCliente().addClickListener(new ComponentEventListener() {
 			@Override
 			public void onComponentEvent(ComponentEvent event) {
 				// TODO Auto-generated method stub
@@ -28,18 +29,14 @@ public class Poner_Cliente extends VistaPonerCliente {
 	}
 
 	void Inicializar() {
-		this.getNuevoCliente().setVisible(false);
-		this.getNuevaDireccion().setVisible(false);
-		this.getNuevoTelefono().setVisible(false);
-		
+		this.getVaadinVerticalLayout().as(VerticalLayout.class).add(ncl);
+		ncl.setVisible(false);
 		this.getSeleccionCliente().setItems(cl);
 		this.getSeleccionCliente().setItemLabelGenerator(Cliente::getNombre);
 	}
 
 	void nuevoCliente() {
-		this.getNuevoCliente().setVisible(true);
-		this.getNuevaDireccion().setVisible(true);
-		this.getNuevoTelefono().setVisible(true);
+		ncl.setVisible(false);
 		_cliente = true;
 	}
 

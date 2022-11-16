@@ -25,14 +25,8 @@ public class VistaPonerCliente extends PolymerTemplate<VistaPonerCliente.VistaPo
 
     @Id("vaadinVerticalLayout")
 	private Element vaadinVerticalLayout;
-	@Id("nuevo")
-	private Button nuevo;
-	@Id("nuevoCliente")
-	private TextField nuevoCliente;
-	@Id("nuevaDireccion")
-	private TextField nuevaDireccion;
-	@Id("nuevoTelefono")
-	private TextField nuevoTelefono;
+	@Id("BotonNuevoCliente")
+	private Button BotonNuevoCliente;
 	@Id("seleccionCliente")
 	private ComboBox<Cliente> seleccionCliente;
 	/**
@@ -65,35 +59,13 @@ public class VistaPonerCliente extends PolymerTemplate<VistaPonerCliente.VistaPo
 		this.seleccionCliente = seleccionCliente;
 	}
 
-	public Button getNuevo() {
-		return nuevo;
+	public Button getBotonNuevoCliente() {
+		return BotonNuevoCliente;
 	}
 
-	public void setNuevo(Button nuevo) {
-		this.nuevo = nuevo;
+	public void setBotonNuevoCliente(Button botonNuevoCliente) {
+		BotonNuevoCliente = botonNuevoCliente;
 	}
 
-	public TextField getNuevoCliente() {
-		return nuevoCliente;
-	}
-
-	public void setNuevoCliente(TextField nuevoCliente) {
-		this.nuevoCliente = nuevoCliente;
-	}
-
-	public TextField getNuevaDireccion() {
-		return nuevaDireccion;
-	}
-
-	public void setNuevaDireccion(TextField nuevaDireccion) {
-		this.nuevaDireccion = nuevaDireccion;
-	}
-
-	public TextField getNuevoTelefono() {
-		return nuevoTelefono;
-	}
-
-	public void setNuevoTelefono(TextField nuevoTelefono) {
-		this.nuevoTelefono = nuevoTelefono;
-	}
+	 
 }

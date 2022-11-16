@@ -12,6 +12,7 @@ import com.vaadin.flow.component.polymertemplate.Id;
 import com.vaadin.flow.component.combobox.ComboBox;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.textfield.TextField;
+import vistas.VistaNuevoasunto;
 
 /**
  * A Designer generated component for the vista-poner-asunto template.
@@ -27,10 +28,8 @@ public class VistaPonerAsunto extends PolymerTemplate<VistaPonerAsunto.VistaPone
 	private Element vaadinVerticalLayout;
 	@Id("seleccionAsunto")
 	private ComboBox<Asunto> seleccionAsunto;
-	@Id("nuevioAsunto")
-	private Button nuevioAsunto;
-	@Id("introduzcaElAsunto")
-	private TextField introduzcaElAsunto;
+	@Id("BotonNuevoAsunto")
+	private Button botonNuevoAsunto;
 
 	/**
      * Creates a new VistaPonerAsunto.
@@ -62,19 +61,13 @@ public class VistaPonerAsunto extends PolymerTemplate<VistaPonerAsunto.VistaPone
 		this.seleccionAsunto = seleccionAsunto;
 	}
 
-	public Button getNuevioAsunto() {
-		return nuevioAsunto;
+	public Button getBotonNuevoAsunto() {
+		return botonNuevoAsunto;
 	}
 
-	public void setNuevioAsunto(Button nuevioAsunto) {
-		this.nuevioAsunto = nuevioAsunto;
+	public void setBotonNuevoAsunto(Button botonNuevoAsunto) {
+		this.botonNuevoAsunto = botonNuevoAsunto;
 	}
 
-	public TextField getIntroduzcaElAsunto() {
-		return introduzcaElAsunto;
-	}
-
-	public void setIntroduzcaElAsunto(TextField introduzcaElAsunto) {
-		this.introduzcaElAsunto = introduzcaElAsunto;
-	}
+	 
 }

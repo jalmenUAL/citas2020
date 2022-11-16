@@ -13,7 +13,7 @@ class VistaNuevoasunto extends PolymerElement {
                 }
             </style>
 <vaadin-vertical-layout style="width: 100%; height: 100%;" id="vaadinVerticalLayout">
- <vaadin-text-field label="Nuevo Asunto" placeholder="Introduzca el nuevo asunto" id="nuevoAsunto" style="align-self: stretch;"></vaadin-text-field>
+ <vaadin-text-field label="Asunto" placeholder="Introduzca el nuevo asunto" id="nuevoAsunto" style="align-self: stretch;"></vaadin-text-field>
 </vaadin-vertical-layout>
 `;
     }

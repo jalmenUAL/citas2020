@@ -36,4 +36,20 @@ public class VistaNuevoasunto extends PolymerTemplate<VistaNuevoasunto.VistaNuev
     public interface VistaNuevoasuntoModel extends TemplateModel {
         // Add setters and getters for template properties here.
     }
+
+	public Element getVaadinVerticalLayout() {
+		return vaadinVerticalLayout;
+	}
+
+	public void setVaadinVerticalLayout(Element vaadinVerticalLayout) {
+		this.vaadinVerticalLayout = vaadinVerticalLayout;
+	}
+
+	public TextField getNuevoAsunto() {
+		return nuevoAsunto;
+	}
+
+	public void setNuevoAsunto(TextField nuevoAsunto) {
+		this.nuevoAsunto = nuevoAsunto;
+	}
 }
