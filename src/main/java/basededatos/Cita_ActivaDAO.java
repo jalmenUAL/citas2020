@@ -65,7 +65,7 @@ public class Cita_ActivaDAO {
 	
 	public static Cita_Activa loadCita_ActivaByORMID(PersistentSession session, int ID) throws PersistentException {
 		try {
-			return (Cita_Activa) session.load(basededatos.Cita_Activa.class, new Integer(ID));
+			return (Cita_Activa) session.load(basededatos.Cita_Activa.class, Integer.valueOf(ID));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -75,7 +75,7 @@ public class Cita_ActivaDAO {
 	
 	public static Cita_Activa getCita_ActivaByORMID(PersistentSession session, int ID) throws PersistentException {
 		try {
-			return (Cita_Activa) session.get(basededatos.Cita_Activa.class, new Integer(ID));
+			return (Cita_Activa) session.get(basededatos.Cita_Activa.class, Integer.valueOf(ID));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -85,7 +85,7 @@ public class Cita_ActivaDAO {
 	
 	public static Cita_Activa loadCita_ActivaByORMID(PersistentSession session, int ID, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Cita_Activa) session.load(basededatos.Cita_Activa.class, new Integer(ID), lockMode);
+			return (Cita_Activa) session.load(basededatos.Cita_Activa.class, Integer.valueOf(ID), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -95,7 +95,7 @@ public class Cita_ActivaDAO {
 	
 	public static Cita_Activa getCita_ActivaByORMID(PersistentSession session, int ID, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Cita_Activa) session.get(basededatos.Cita_Activa.class, new Integer(ID), lockMode);
+			return (Cita_Activa) session.get(basededatos.Cita_Activa.class, Integer.valueOf(ID), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();

@@ -61,6 +61,7 @@ public class MainView extends VerticalLayout {
         
         LoginForm vl = gen.ln.getVaadinLoginForm();
     	
+        
     	vl.addLoginListener(e -> {
     	    
     	    if (e.getUsername().equals("admin")) {

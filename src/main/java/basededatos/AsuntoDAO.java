@@ -65,7 +65,7 @@ public class AsuntoDAO {
 	
 	public static Asunto loadAsuntoByORMID(PersistentSession session, int ID) throws PersistentException {
 		try {
-			return (Asunto) session.load(basededatos.Asunto.class, new Integer(ID));
+			return (Asunto) session.load(basededatos.Asunto.class, Integer.valueOf(ID));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -75,7 +75,7 @@ public class AsuntoDAO {
 	
 	public static Asunto getAsuntoByORMID(PersistentSession session, int ID) throws PersistentException {
 		try {
-			return (Asunto) session.get(basededatos.Asunto.class, new Integer(ID));
+			return (Asunto) session.get(basededatos.Asunto.class, Integer.valueOf(ID));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -85,7 +85,7 @@ public class AsuntoDAO {
 	
 	public static Asunto loadAsuntoByORMID(PersistentSession session, int ID, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Asunto) session.load(basededatos.Asunto.class, new Integer(ID), lockMode);
+			return (Asunto) session.load(basededatos.Asunto.class, Integer.valueOf(ID), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -95,7 +95,7 @@ public class AsuntoDAO {
 	
 	public static Asunto getAsuntoByORMID(PersistentSession session, int ID, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Asunto) session.get(basededatos.Asunto.class, new Integer(ID), lockMode);
+			return (Asunto) session.get(basededatos.Asunto.class, Integer.valueOf(ID), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();

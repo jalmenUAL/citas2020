@@ -65,7 +65,7 @@ public class ClienteDAO {
 	
 	public static Cliente loadClienteByORMID(PersistentSession session, int ID) throws PersistentException {
 		try {
-			return (Cliente) session.load(basededatos.Cliente.class, new Integer(ID));
+			return (Cliente) session.load(basededatos.Cliente.class, Integer.valueOf(ID));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -75,7 +75,7 @@ public class ClienteDAO {
 	
 	public static Cliente getClienteByORMID(PersistentSession session, int ID) throws PersistentException {
 		try {
-			return (Cliente) session.get(basededatos.Cliente.class, new Integer(ID));
+			return (Cliente) session.get(basededatos.Cliente.class, Integer.valueOf(ID));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -85,7 +85,7 @@ public class ClienteDAO {
 	
 	public static Cliente loadClienteByORMID(PersistentSession session, int ID, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Cliente) session.load(basededatos.Cliente.class, new Integer(ID), lockMode);
+			return (Cliente) session.load(basededatos.Cliente.class, Integer.valueOf(ID), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -95,7 +95,7 @@ public class ClienteDAO {
 	
 	public static Cliente getClienteByORMID(PersistentSession session, int ID, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Cliente) session.get(basededatos.Cliente.class, new Integer(ID), lockMode);
+			return (Cliente) session.get(basededatos.Cliente.class, Integer.valueOf(ID), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();

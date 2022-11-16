@@ -65,7 +65,7 @@ public class FechaDAO {
 	
 	public static Fecha loadFechaByORMID(PersistentSession session, int ID) throws PersistentException {
 		try {
-			return (Fecha) session.load(basededatos.Fecha.class, new Integer(ID));
+			return (Fecha) session.load(basededatos.Fecha.class, Integer.valueOf(ID));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -75,7 +75,7 @@ public class FechaDAO {
 	
 	public static Fecha getFechaByORMID(PersistentSession session, int ID) throws PersistentException {
 		try {
-			return (Fecha) session.get(basededatos.Fecha.class, new Integer(ID));
+			return (Fecha) session.get(basededatos.Fecha.class, Integer.valueOf(ID));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -85,7 +85,7 @@ public class FechaDAO {
 	
 	public static Fecha loadFechaByORMID(PersistentSession session, int ID, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Fecha) session.load(basededatos.Fecha.class, new Integer(ID), lockMode);
+			return (Fecha) session.load(basededatos.Fecha.class, Integer.valueOf(ID), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -95,7 +95,7 @@ public class FechaDAO {
 	
 	public static Fecha getFechaByORMID(PersistentSession session, int ID, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Fecha) session.get(basededatos.Fecha.class, new Integer(ID), lockMode);
+			return (Fecha) session.get(basededatos.Fecha.class, Integer.valueOf(ID), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
