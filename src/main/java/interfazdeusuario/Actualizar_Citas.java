@@ -18,6 +18,7 @@ public class Actualizar_Citas extends Ver_Citas {
 		
 		 
 		
+		
 		Inicializar();
 
 		this.getRealizar().addClickListener(new ComponentEventListener() {

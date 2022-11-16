@@ -1,10 +1,8 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
-import '@vaadin/vaadin-combo-box/src/vaadin-combo-box.js';
 import '@vaadin/vaadin-text-field/src/vaadin-text-field.js';
-import '@vaadin/vaadin-button/src/vaadin-button.js';
 
-class VistaPonerAsunto extends PolymerElement {
+class VistaNuevoasunto extends PolymerElement {
 
     static get template() {
         return html`
@@ -12,17 +10,16 @@ class VistaPonerAsunto extends PolymerElement {
                 :host {
                     display: block;
                     height: 100%;
-        			width: 100%;
                 }
             </style>
 <vaadin-vertical-layout style="width: 100%; height: 100%;" id="vaadinVerticalLayout">
- <vaadin-combo-box id="seleccionAsunto" style="align-self: stretch;"></vaadin-combo-box>
+ <vaadin-text-field label="Nuevo Asunto" placeholder="Introduzca el nuevo asunto" id="nuevoAsunto" style="align-self: stretch;"></vaadin-text-field>
 </vaadin-vertical-layout>
 `;
     }
 
     static get is() {
-        return 'vista-poner-asunto';
+        return 'vista-nuevoasunto';
     }
 
     static get properties() {
@@ -32,4 +29,4 @@ class VistaPonerAsunto extends PolymerElement {
     }
 }
 
-customElements.define(VistaPonerAsunto.is, VistaPonerAsunto);
+customElements.define(VistaNuevoasunto.is, VistaNuevoasunto);
