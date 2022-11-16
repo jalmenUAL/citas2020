@@ -27,7 +27,7 @@ public class VistaVercitas extends PolymerTemplate<VistaVercitas.VistaVercitasMo
 
     @Id("vaadinVerticalLayout")
 	private Element vaadinVerticalLayout;
-	@Id("tablapendientes")
+	@Id("tablarealizadas")
 	private Grid<Cita_Activa> tablapendientes;
 	@Id("realizar")
 	private Button realizar;

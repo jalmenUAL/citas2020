@@ -16,12 +16,14 @@ import basededatos.Cliente;
 import bds.Bd_Principal;
 import bds.iAdministrador;
 import vistas.VistaVercitas;
+import vistas.VistaVercitasitem;
 
 public class Ver_Citas extends VistaVercitas  {
 	 
 	
 	iAdministrador adm = new Bd_Principal();
 	Ver_Informacion_de_Cliente vinfo = new Ver_Informacion_de_Cliente();
+	 
 
 	public Ver_Citas() {
 		 
@@ -93,6 +95,17 @@ public class Ver_Citas extends VistaVercitas  {
 	public void Cargar_Citas() {
 		
 		List<Cita_Activa> ca = adm.Cargar_Citas_Pendientes();
+		
+		for (int i=0; i<ca.size();i++)
+		{
+			VistaVercitasitem vci = new VistaVercitasitem();
+			vci.getCliente().setValue(ca.get(i).getCliente().getNombre());
+			vci.getAsunto().setValue(ca.get(i).getEs_para().getNombre());
+			vci.getDia().setValue(Integer.toString(ca.get(i).getFecha().getDia()));
+			vci.getCliente().setValue(ca.get(i).getCliente().getNombre());
+		}
+		
+		/*List<Cita_Activa> ca = adm.Cargar_Citas_Pendientes();
 		this.getTablapendientes().removeAllColumns();
 		 
 		
@@ -115,7 +128,7 @@ public class Ver_Citas extends VistaVercitas  {
 		this.getTablarealizadas().addColumn(Cita_Realizada -> Cita_Realizada.getFecha().getMes()).setHeader("Mes");
 		this.getTablarealizadas().addColumn(Cita_Realizada -> Cita_Realizada.getFecha().getAnyo()).setHeader("Año");
 		this.getTablarealizadas().addColumn(Cita_Realizada -> Cita_Realizada.getEs_para().getNombre()).setHeader("Asunto");
-		this.getTablarealizadas().setItems(cr);
+		this.getTablarealizadas().setItems(cr);*/
 
 		
 
