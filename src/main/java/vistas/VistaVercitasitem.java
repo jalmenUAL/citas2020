@@ -26,16 +26,16 @@ public class VistaVercitasitem extends PolymerTemplate<VistaVercitasitem.VistaVe
 	private HorizontalLayout vaadinHorizontalLayout;
 	@Id("cliente")
 	private TextField cliente;
-	@Id("día")
-	private TextField día;
 	@Id("mes")
 	private TextField mes;
-	@Id("año")
-	private TextField año;
 	@Id("asunto")
 	private TextField asunto;
-	@Id("vaadinCheckbox")
-	private Checkbox vaadinCheckbox;
+	@Id("Seleccionado")
+	private Checkbox seleccionado;
+	@Id("dia")
+	private TextField dia;
+	@Id("ano")
+	private TextField ano;
 
 	/**
      * Creates a new VistaVercitasitem.
@@ -50,4 +50,68 @@ public class VistaVercitasitem extends PolymerTemplate<VistaVercitasitem.VistaVe
     public interface VistaVercitasitemModel extends TemplateModel {
         // Add setters and getters for template properties here.
     }
+
+	public Element getVaadinVerticalLayout() {
+		return vaadinVerticalLayout;
+	}
+
+	public void setVaadinVerticalLayout(Element vaadinVerticalLayout) {
+		this.vaadinVerticalLayout = vaadinVerticalLayout;
+	}
+
+	public HorizontalLayout getVaadinHorizontalLayout() {
+		return vaadinHorizontalLayout;
+	}
+
+	public void setVaadinHorizontalLayout(HorizontalLayout vaadinHorizontalLayout) {
+		this.vaadinHorizontalLayout = vaadinHorizontalLayout;
+	}
+
+	public TextField getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(TextField cliente) {
+		this.cliente = cliente;
+	}
+
+	public TextField getMes() {
+		return mes;
+	}
+
+	public void setMes(TextField mes) {
+		this.mes = mes;
+	}
+
+	public TextField getAsunto() {
+		return asunto;
+	}
+
+	public void setAsunto(TextField asunto) {
+		this.asunto = asunto;
+	}
+
+	public Checkbox getSeleccionado() {
+		return seleccionado;
+	}
+
+	public void setSeleccionado(Checkbox seleccionado) {
+		this.seleccionado = seleccionado;
+	}
+
+	public TextField getDia() {
+		return dia;
+	}
+
+	public void setDia(TextField dia) {
+		this.dia = dia;
+	}
+
+	public TextField getAno() {
+		return ano;
+	}
+
+	public void setAno(TextField ano) {
+		this.ano = ano;
+	}
 }

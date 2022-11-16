@@ -24,6 +24,8 @@ public class VistaNuevocliente extends PolymerTemplate<VistaNuevocliente.VistaNu
 	private TextField nuevoCliente;
 	@Id("Direccion")
 	private TextField direccion;
+	@Id("Telefono")
+	private TextField telefono;
 
 	/**
      * Creates a new VistaNuevocliente.
@@ -61,5 +63,13 @@ public class VistaNuevocliente extends PolymerTemplate<VistaNuevocliente.VistaNu
 
 	public void setDireccion(TextField direccion) {
 		this.direccion = direccion;
+	}
+
+	public TextField getTelefono() {
+		return telefono;
+	}
+
+	public void setTelefono(TextField telefono) {
+		this.telefono = telefono;
 	}
 }

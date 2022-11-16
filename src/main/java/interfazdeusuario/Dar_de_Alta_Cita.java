@@ -47,10 +47,10 @@ public class Dar_de_Alta_Cita extends VistaDarDeAlta {
 
 				
 				
-				adm.Crear_Cita_Asunto_Cliente_Nuevos(pf.getFechaCita().getValue(), pa.getIntroduzcaElAsunto().getValue(),
-						pcl.getNuevoCliente().getValue(), pcl.getNuevaDireccion().getValue(),
-						pcl.getNuevoTelefono().getValue());
-				pa.getNuevioAsunto().setVisible(false);
+				adm.Crear_Cita_Asunto_Cliente_Nuevos(pf.getFechaCita().getValue(), pa.na.getNuevoAsunto().getValue(),
+						pcl.ncl.getNuevoCliente().getValue(), pcl.ncl.getDireccion().getValue(),
+						pcl.ncl.getTelefono().getValue());
+				pa.na.getNuevoAsunto().setVisible(false);
 				pa._asunto = false;
 				pcl._cliente = false;
 
@@ -61,8 +61,8 @@ public class Dar_de_Alta_Cita extends VistaDarDeAlta {
 					if (pf.getFechaCita().getValue()==null) {Notification.show("Por favor, selecciona una fecha");}
 					else {
 				Asunto asunto = pa.getSeleccionAsunto().getValue();
-				adm.Crear_Cita_Nuevo_Cliente(pf.getFechaCita().getValue(), pcl.getNuevoCliente().getValue(),
-						pcl.getNuevaDireccion().getValue(), pcl.getNuevoTelefono().getValue(), asunto.getORMID());
+				adm.Crear_Cita_Nuevo_Cliente(pf.getFechaCita().getValue(), pcl.ncl.getNuevoCliente().getValue(),
+						pcl.ncl.getDireccion().getValue(), pcl.ncl.getTelefono().getValue(), asunto.getORMID());
 
 				
 				pcl._cliente = false;
@@ -77,7 +77,7 @@ public class Dar_de_Alta_Cita extends VistaDarDeAlta {
 						if (pf.getFechaCita().getValue()==null) {Notification.show("Por favor, selecciona una fecha");}
 						else {
 				Cliente cliente = pcl.getSeleccionCliente().getValue();
-				adm.Crear_Cita_Nuevo_Asunto(pf.getFechaCita().getValue(), pa.getIntroduzcaElAsunto().getValue(),
+				adm.Crear_Cita_Nuevo_Asunto(pf.getFechaCita().getValue(), pa.na.getNuevoAsunto().getValue(),
 						cliente.getORMID());
 				pa._asunto = false;
 				}

@@ -16,13 +16,13 @@ class VistaVercitasitem extends PolymerElement {
             </style>
 <vaadin-vertical-layout style="width: 100%; height: 100%;">
  <vaadin-horizontal-layout theme="spacing" style="align-self: stretch;">
-  <vaadin-text-field label="Cliente" placeholder="Placeholder" style="flex-grow: 1;"></vaadin-text-field>
-  <vaadin-text-field label="Día" placeholder="Placeholder" style="flex-grow: 1;"></vaadin-text-field>
-  <vaadin-text-field label="Mes" placeholder="Placeholder" style="flex-grow: 1;"></vaadin-text-field>
-  <vaadin-text-field label="Año" placeholder="Placeholder" style="flex-grow: 1;"></vaadin-text-field>
-  <vaadin-text-field label="Asunto" placeholder="Placeholder" style="flex-grow: 1;"></vaadin-text-field>
-  <vaadin-checkbox style="align-self: center;">
-   Seleccionar 
+  <vaadin-text-field label="Cliente" placeholder="Placeholder" style="flex-grow: 1;" id="cliente"></vaadin-text-field>
+  <vaadin-text-field label="Día" placeholder="Placeholder" style="flex-grow: 1;" id="dia"></vaadin-text-field>
+  <vaadin-text-field label="Mes" placeholder="Placeholder" style="flex-grow: 1;" id="mes"></vaadin-text-field>
+  <vaadin-text-field label="Año" placeholder="Placeholder" style="flex-grow: 1;" id="ano"></vaadin-text-field>
+  <vaadin-text-field label="Asunto" placeholder="Placeholder" style="flex-grow: 1;" id="asunto"></vaadin-text-field>
+  <vaadin-checkbox style="align-self: center;" id="Seleccionado">
+    Seleccionar 
   </vaadin-checkbox>
  </vaadin-horizontal-layout>
 </vaadin-vertical-layout>
