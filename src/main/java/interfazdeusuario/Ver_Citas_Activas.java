@@ -18,7 +18,7 @@ public void cargar_citas_activas() {
 	
 	for (int i=0; i<ca.size();i++)
 	{
-		Ver_Citas_Activas_item vci = new Ver_Citas_Activas_item();
+		Ver_Citas_Activas_item vci = new Ver_Citas_Activas_item(ca.get(i));
 		vci.getCliente().setValue(ca.get(i).getCliente().getNombre());
 		vci.getAsunto().setValue(ca.get(i).getEs_para().getNombre());
 		vci.getDia().setValue(Integer.toString(ca.get(i).getFecha().getDia()));

@@ -8,7 +8,7 @@ import vistas.VistaGestionarCitas;
 public class Gestionar_Citas extends VistaGestionarCitas {
 	
 	 
-	Ver_Citas _vc = new Ver_Citas();
+	Ver_Todas_las_Citas _vc = new Ver_Todas_las_Citas();
 	Dar_de_Alta_Cita _da = new Dar_de_Alta_Cita();
 	Dar_de_Baja_Cita _db = new Dar_de_Baja_Cita();
 	
@@ -27,7 +27,7 @@ public class Gestionar_Citas extends VistaGestionarCitas {
 			}
 		});
 		 
-	    _db.getDarBajaACita().addClickListener(new ComponentEventListener() {
+	    _db.getDarBaja().addClickListener(new ComponentEventListener() {
 			 
 
 			@Override
@@ -47,12 +47,10 @@ public class Gestionar_Citas extends VistaGestionarCitas {
 	}
 
 	void darDeAltaCitas() {
-		_vc.Cargar_Citas();
-		_db.Cargar_Citas();
+		 
 	}
 
 	void darDeBajaCitas() {
-		_vc.Cargar_Citas();
-		_db.Cargar_Citas();
+		 
 	}
 }
