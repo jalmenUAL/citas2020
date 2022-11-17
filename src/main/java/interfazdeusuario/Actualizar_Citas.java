@@ -10,18 +10,16 @@ import basededatos.Cita_Activa;
 import bds.Bd_Principal;
 import bds.iUsuario;
 
-public class Actualizar_Citas extends Ver_Citas {
+public class Actualizar_Citas extends Ver_Todas_las_Citas {
 	 
 	iUsuario usu = new Bd_Principal();
 	
 	public Actualizar_Citas() {
 		
-		 
-		
-		
+				
 		Inicializar();
 
-		this.getRealizar().addClickListener(new ComponentEventListener() {
+		this.getDarPorRealizadaCita().addClickListener(new ComponentEventListener() {
 
 			@Override
 			public void onComponentEvent(ComponentEvent event) {
@@ -31,7 +29,7 @@ public class Actualizar_Citas extends Ver_Citas {
 			}
 		});
 
-		this.getPosponer().addClickListener(new ComponentEventListener() {
+		this.getPosponerCita().addClickListener(new ComponentEventListener() {
 
 			@Override
 			public void onComponentEvent(ComponentEvent event) {
@@ -53,55 +51,46 @@ public class Actualizar_Citas extends Ver_Citas {
 		
 	}
 
-	void Inicializar() {
-		Cargar_Citas();
+	public void Inicializar() {
+		super.Inicializar();
 		this.getCambiarFecha().setVisible(false);
 		this.getNuevaFecha().setVisible(false);
-		this.getDarBajaACita().setVisible(false);
-		this.getPosponer().setVisible(true);
-		this.getRealizar().setVisible(true);
+		this.getDarBaja().setVisible(false);
+		this.getPosponerCita().setVisible(true);
+		this.getDarPorRealizadaCita().setVisible(true);
 	}
 
 	void RealizarCita() {
 
-		if (this.getTablapendientes().getSelectedItems().size() > 0) {
-			Optional<basededatos.Cita_Activa> item = this.getTablapendientes().getSelectionModel().getFirstSelectedItem();
-
-			item.ifPresent(cita -> {
-				Integer id;
-				id = cita.getID();
+		        for (int i=0;i < this._ver_Citas_Activas._item.size();i++)
+		        {
+		        Integer id;
+				id = this._ver_Citas_Activas._item.elementAt(i).cita.getID();
 				usu.Cita_Realizada(id);
-				Cargar_Citas();
-			});
-		} else {
-			Notification.show("Seleccione una cita");
-		}
+		        }
+				Inicializar();
+		 
 	};
 
 	void PosponerCita() {
-		
-		if (this.getTablapendientes().getSelectedItems().size() > 0) {			
 			this.getCambiarFecha().setVisible(true);
-			this.getNuevaFecha().setVisible(true);
-			
-		} else {
-			Notification.show("Seleccione una cita");
-		}
+			this.getNuevaFecha().setVisible(true); 
 	}
 
 	void cambiarFecha() {
 
-		Optional<Cita_Activa> item = this.getTablapendientes().getSelectionModel().getFirstSelectedItem();
-
-		item.ifPresent(cita -> {
 		
-			Integer id;
-			id = cita.getID();
-			usu.Cita_Pospuesta(id, this.getNuevaFecha().getValue());
-			Cargar_Citas();	
+		for (int i=0;i < this._ver_Citas_Activas._item.size();i++)
+        {
+		Integer id;
+		id = this._ver_Citas_Activas._item.elementAt(i).cita.getID();
+		usu.Cita_Pospuesta(id, this.getNuevaFecha().getValue());
+        }
+			
+			Inicializar();
 			this.getCambiarFecha().setVisible(false);
 			this.getNuevaFecha().setVisible(false);
-		});
+		 
 	}
 
 }

@@ -27,22 +27,17 @@ public class VistaVercitas extends PolymerTemplate<VistaVercitas.VistaVercitasMo
 
     @Id("vaadinVerticalLayout")
 	private Element vaadinVerticalLayout;
-	@Id("tablarealizadas")
-	private Grid<Cita_Activa> tablapendientes;
-	@Id("realizar")
-	private Button realizar;
-	@Id("posponer")
-	private Button posponer;
-	@Id("cambiarFecha")
-	private Button cambiarFecha;
-	@Id("nuevaFecha")
-	private DatePicker nuevaFecha;
+	 
+	 
 	@Id("verInformacionCliente")
 	private Button verInformacionCliente;
-	@Id("darBajaACita")
-	private Button darBajaACita;
-	@Id("tablarealizadas")
-	private Grid<Cita_Realizada> tablarealizadas;
+
+
+	@Id("tabla")
+	private Element tabla;
+	 
+
+	 
 	/**
      * Creates a new VistaVercitas.
      */
@@ -67,41 +62,6 @@ public class VistaVercitas extends PolymerTemplate<VistaVercitas.VistaVercitasMo
 		this.vaadinVerticalLayout = vaadinVerticalLayout;
 	}
 
-	 
-	public Button getRealizar() {
-		return realizar;
-	}
-
-	public void setRealizar(Button realizar) {
-		this.realizar = realizar;
-	}
-
-	public Button getPosponer() {
-		return posponer;
-	}
-
-	public void setPosponer(Button posponer) {
-		this.posponer = posponer;
-	}
-
-	public Button getCambiarFecha() {
-		return cambiarFecha;
-	}
-
-	public void setCambiarFecha(Button cambiarFecha) {
-		this.cambiarFecha = cambiarFecha;
-	}
-
-	public DatePicker getNuevaFecha() {
-		return nuevaFecha;
-	}
-
-	public void setNuevaFecha(DatePicker nuevaFecha) {
-		this.nuevaFecha = nuevaFecha;
-	}
-
-	 
-
 	public Button getVerInformacionCliente() {
 		return verInformacionCliente;
 	}
@@ -110,28 +70,12 @@ public class VistaVercitas extends PolymerTemplate<VistaVercitas.VistaVercitasMo
 		this.verInformacionCliente = verInformacionCliente;
 	}
 
-	public Button getDarBajaACita() {
-		return darBajaACita;
+	public Element getTabla() {
+		return tabla;
 	}
 
-	public void setDarBajaACita(Button darBajaACita) {
-		this.darBajaACita = darBajaACita;
-	}
-
-	public Grid<Cita_Activa> getTablapendientes() {
-		return tablapendientes;
-	}
-
-	public void setTablapendientes(Grid<Cita_Activa> tablapendientes) {
-		this.tablapendientes = tablapendientes;
-	}
-
-	public Grid<Cita_Realizada> getTablarealizadas() {
-		return tablarealizadas;
-	}
-
-	public void setTablarealizadas(Grid<Cita_Realizada> tablarealizadas) {
-		this.tablarealizadas = tablarealizadas;
+	public void setTabla(Element tabla) {
+		this.tabla = tabla;
 	}
 
 	 

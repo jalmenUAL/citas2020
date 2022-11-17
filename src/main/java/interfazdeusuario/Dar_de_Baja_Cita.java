@@ -11,14 +11,14 @@ import bds.iAdministrador;
 
  
 
-public class Dar_de_Baja_Cita extends Ver_Citas {
+public class Dar_de_Baja_Cita extends Ver_Todas_las_Citas {
 	
 	iAdministrador adm = new Bd_Principal();
 
 	public Dar_de_Baja_Cita() {
 		 
 		Inicializar();
-		this.getDarBajaACita().addClickListener(new ComponentEventListener() {
+		this.getDarBaja().addClickListener(new ComponentEventListener() {
 
 			@Override
 			public void onComponentEvent(ComponentEvent event) {
@@ -31,29 +31,26 @@ public class Dar_de_Baja_Cita extends Ver_Citas {
 		
 	}
 
-	void Inicializar() {
-		Cargar_Citas();
-		this.getPosponer().setVisible(false);
-		this.getRealizar().setVisible(false);
+	public void Inicializar() {
+		super.Inicializar();
+		this.getPosponerCita().setVisible(false);
+		this.getDarPorRealizadaCita().setVisible(false);
 		this.getCambiarFecha().setVisible(false);
 		this.getNuevaFecha().setVisible(false);
-		this.getDarBajaACita().setVisible(true);
+		this.getDarBaja().setVisible(true);
 		
 	}
 
 	void darDeBajaCita() {
-		if (this.getTablapendientes().getSelectedItems().size() > 0) {
-
-			Cita_Activa cita = (Cita_Activa) this.getTablapendientes().asSingleSelect().getValue();
-			 
-				Integer id = cita.getID();
+		 
+		for (int i=0;i < this._ver_Citas_Activas._item.size();i++)
+        {
+				Integer id = this._ver_Citas_Activas._item.elementAt(i).cita.getID();
 
 				adm.Baja_Cita_Activa(id);
-			 
+        }
 
-		} else {
-			Notification.show("Seleccione una cita" );
-		}
+		 
 	}
 
 	 
