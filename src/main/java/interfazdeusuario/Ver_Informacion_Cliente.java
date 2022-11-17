@@ -5,9 +5,10 @@ import com.vaadin.flow.component.ComponentEventListener;
 
 import vistas.VistaVerInformacionCliente;
 
-public class Ver_Informacion_de_Cliente extends VistaVerInformacionCliente {
+public class Ver_Informacion_Cliente extends VistaVerInformacionCliente {
+	public Ver_Citas_item _ver_Citas;
 
-	public Ver_Informacion_de_Cliente() {
+	public Ver_Informacion_Cliente() {
 		 
 		this.getVaadinButton().addClickListener(new ComponentEventListener() {
 			 

@@ -4,6 +4,7 @@ package interfazdeusuario;
  
 import java.util.List;
 import java.util.Optional;
+import java.util.Vector;
 
 import com.vaadin.flow.component.ComponentEvent;
 import com.vaadin.flow.component.ComponentEventListener;
@@ -20,34 +21,16 @@ import vistas.VistaVercitasitem;
 
 public class Ver_Citas extends VistaVercitas  {
 	 
-	
-	iAdministrador adm = new Bd_Principal();
+	public Vector<Ver_Citas_item> _item = new Vector<Ver_Citas_item>();
+	iAdministrador adm = new Bd_Principal();	 
 	 
-	Ver_Citas_Realizadas  cr = new Ver_Citas_Realizadas();
-	Ver_Citas_Activas ca = new Ver_Citas_Activas();
 
 	public Ver_Citas() {
 		 
-		//Inicializar();
-		/*this.getVerInformacionCliente().addClickListener(new ComponentEventListener() {
-			@Override
-			public void onComponentEvent(ComponentEvent event) {
-				// TODO Auto-generated method stub
-			    vinfo.setVisible(true);
-			    verInformacionDeCliente();
-				
-			}
-		});*/
+		 
 	}
 
-	/*void Inicializar() {
-		Cargar_Citas();	 
-	}
-	public void Cargar_Citas() {
-		cr.cargar_citas_realizadas();
-		ca.cargar_citas_activas();
-		
-	}*/
+	 
 	
 	
 	 

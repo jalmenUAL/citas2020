@@ -12,10 +12,14 @@ import bds.iAdministrador;
 import vistas.VistaPonerCliente;
 
 public class Poner_Cliente extends VistaPonerCliente {
+	
+	public Dar_de_Alta_Cita _dar_de_Alta_Cita;
+	public Nuevo_Cliente _nuevo_Cliente;
+	
 	Boolean _cliente = false;
 	iAdministrador adm = new Bd_Principal();
 	List<Cliente> cl = adm.Cargar_Clientes();
-	Nuevo_Cliente ncl = new Nuevo_Cliente();
+	
 
 	public Poner_Cliente() { 
 		Inicializar();
@@ -29,14 +33,14 @@ public class Poner_Cliente extends VistaPonerCliente {
 	}
 
 	void Inicializar() {
-		this.getVaadinVerticalLayout().as(VerticalLayout.class).add(ncl);
-		ncl.setVisible(false);
+		this.getVaadinVerticalLayout().as(VerticalLayout.class).add(_nuevo_Cliente);
+		_nuevo_Cliente.setVisible(false);
 		this.getSeleccionCliente().setItems(cl);
 		this.getSeleccionCliente().setItemLabelGenerator(Cliente::getNombre);
 	}
 
 	void nuevoCliente() {
-		ncl.setVisible(false);
+		_nuevo_Cliente.setVisible(false);
 		_cliente = true;
 	}
 

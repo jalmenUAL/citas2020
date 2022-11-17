@@ -13,7 +13,9 @@ import bds.iAdministrador;
 
 public class Dar_de_Baja_Cita extends Ver_Todas_las_Citas {
 	
+	/* CODE GENERATION private event _dar_de_Baja;*/
 	iAdministrador adm = new Bd_Principal();
+	public Gestionar_Citas _gestionar_Citas;
 
 	public Dar_de_Baja_Cita() {
 		 
@@ -23,7 +25,7 @@ public class Dar_de_Baja_Cita extends Ver_Todas_las_Citas {
 			@Override
 			public void onComponentEvent(ComponentEvent event) {
 				// TODO Auto-generated method stub
-				darDeBajaCita();
+				Dar_de_Baja();
 				
 			}
 		});
@@ -41,7 +43,7 @@ public class Dar_de_Baja_Cita extends Ver_Todas_las_Citas {
 		
 	}
 
-	void darDeBajaCita() {
+	void Dar_de_Baja() {
 		 
 		for (int i=0;i < this._ver_Citas_Activas._item.size();i++)
         {

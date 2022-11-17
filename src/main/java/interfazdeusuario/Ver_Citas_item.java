@@ -7,9 +7,11 @@ import bds.iAdministrador;
 import vistas.VistaVercitasitem;
 
 public class Ver_Citas_item extends VistaVercitasitem {
-	 
 	
-	Ver_Informacion_de_Cliente vinfo = new Ver_Informacion_de_Cliente();
+	public Ver_Citas _ver_Citas;
+	public Ver_Informacion_Cliente _ver_Informacion_Cliente = new Ver_Informacion_Cliente();
+	
+	
 	iAdministrador adm = new Bd_Principal();
 	Cita cita;
 	
@@ -20,8 +22,8 @@ public class Ver_Citas_item extends VistaVercitasitem {
 	public void Ver_Informacion_Cliente() {
 		Integer id = cita.getID();
 		Cliente cli = adm.Cargar_Informacion_Cliente(id);
-		vinfo.getNombre().setValue(cli.getNombre());
-		vinfo.getDireccion().setValue(cli.getDireccion());
-		vinfo.getTelefono().setValue(cli.getTelefono());
+		_ver_Informacion_Cliente.getNombre().setValue(cli.getNombre());
+		_ver_Informacion_Cliente.getDireccion().setValue(cli.getDireccion());
+		_ver_Informacion_Cliente.getTelefono().setValue(cli.getTelefono());
 	}
 }

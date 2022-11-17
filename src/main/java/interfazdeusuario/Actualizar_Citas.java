@@ -12,6 +12,11 @@ import bds.iUsuario;
 
 public class Actualizar_Citas extends Ver_Todas_las_Citas {
 	 
+	/*CODE GENERATION
+	private event _dar_por_realizada_Cita;
+	private event _posponer_Cita;
+	public usuario _usuario;*/
+	
 	iUsuario usu = new Bd_Principal();
 	
 	public Actualizar_Citas() {
@@ -24,7 +29,7 @@ public class Actualizar_Citas extends Ver_Todas_las_Citas {
 			@Override
 			public void onComponentEvent(ComponentEvent event) {
 				// TODO Auto-generated method stub
-				RealizarCita();
+				Dar_por_realizada_Cita();
 				
 			}
 		});
@@ -51,6 +56,7 @@ public class Actualizar_Citas extends Ver_Todas_las_Citas {
 		
 	}
 
+	/*NEW*/
 	public void Inicializar() {
 		super.Inicializar();
 		this.getCambiarFecha().setVisible(false);
@@ -60,7 +66,7 @@ public class Actualizar_Citas extends Ver_Todas_las_Citas {
 		this.getDarPorRealizadaCita().setVisible(true);
 	}
 
-	void RealizarCita() {
+	void  Dar_por_realizada_Cita() {
 
 		        for (int i=0;i < this._ver_Citas_Activas._item.size();i++)
 		        {
@@ -77,6 +83,7 @@ public class Actualizar_Citas extends Ver_Todas_las_Citas {
 			this.getNuevaFecha().setVisible(true); 
 	}
 
+	/*NEW*/
 	void cambiarFecha() {
 
 		

@@ -14,9 +14,11 @@ import vistas.VistaDarDeAlta;
 public class Dar_de_Alta_Cita extends VistaDarDeAlta {
 	 
 	iAdministrador adm = new Bd_Principal();
-	Poner_Asunto pa = new Poner_Asunto();
-	Poner_Cliente pcl = new Poner_Cliente();
-	Poner_Fecha pf = new Poner_Fecha();
+	/*CODE GENERATION private event _dar_de_Alta;*/
+	public Gestionar_Citas _gestionar_Citas;
+	public Poner_Fecha _poner_Fecha;
+	public Poner_Asunto _poner_Asunto;
+	public Poner_Cliente _poner_Cliente;
 	
 
 	public Dar_de_Alta_Cita() {
@@ -28,9 +30,9 @@ public class Dar_de_Alta_Cita extends VistaDarDeAlta {
 
 			@Override
 			public void onComponentEvent(ComponentEvent event) {
-				darDeAltaCita();
-				pcl.getSeleccionCliente().setItems(adm.Cargar_Clientes());
-				pa.getSeleccionAsunto().setItems(adm.Cargar_Asuntos());
+				Dar_de_Alta();
+				_poner_Cliente.getSeleccionCliente().setItems(adm.Cargar_Clientes());
+				_poner_Asunto.getSeleccionAsunto().setItems(adm.Cargar_Asuntos());
 				
 			}
 
@@ -41,69 +43,85 @@ public class Dar_de_Alta_Cita extends VistaDarDeAlta {
 		 
 	}
 
-	void darDeAltaCita() {
-		if (pcl._cliente) {
-			if (pa._asunto) {
+	
+
+	void Inicializar() {
+		Poner_Fecha();
+		Poner_Asunto();
+		Poner_Cliente();
+	}
+	
+	public void Poner_Fecha() {
+		VerticalLayout vl = this.getVaadinVerticalLayout().as(VerticalLayout.class);
+		 vl.addComponentAsFirst(_poner_Fecha);
+	}
+
+	public void Poner_Asunto() {
+		VerticalLayout vl = this.getVaadinVerticalLayout().as(VerticalLayout.class);
+		 vl.addComponentAsFirst(_poner_Asunto);
+	}
+
+	public void Poner_Cliente() {
+		VerticalLayout vl = this.getVaadinVerticalLayout().as(VerticalLayout.class);	  
+		 vl.addComponentAsFirst(_poner_Cliente);
+	}
+
+	void Dar_de_Alta() {
+		if (_poner_Cliente._cliente) {
+			if (_poner_Asunto._asunto) {
 
 				
 				
-				adm.Crear_Cita_Asunto_Cliente_Nuevos(pf.getFechaCita().getValue(), pa.na.getNuevoAsunto().getValue(),
-						pcl.ncl.getNuevoCliente().getValue(), pcl.ncl.getDireccion().getValue(),
-						pcl.ncl.getTelefono().getValue());
-				pa.na.getNuevoAsunto().setVisible(false);
-				pa._asunto = false;
-				pcl._cliente = false;
+				adm.Crear_Cita_Asunto_Cliente_Nuevos(_poner_Fecha.getFechaCita().getValue(), _poner_Asunto._nuevo_Asunto.getNuevoAsunto().getValue(),
+						_poner_Cliente._nuevo_Cliente.getNuevoCliente().getValue(), _poner_Cliente._nuevo_Cliente.getDireccion().getValue(),
+						_poner_Cliente._nuevo_Cliente.getTelefono().getValue());
+				_poner_Asunto._nuevo_Asunto.getNuevoAsunto().setVisible(false);
+				_poner_Asunto._asunto = false;
+				_poner_Cliente._cliente = false;
 
 			} else {
 		
-				if (pa.getSeleccionAsunto().getValue()==null) {Notification.show("Por favor, selecciona un asunto");}
+				if (_poner_Asunto.getSeleccionAsunto().getValue()==null) {Notification.show("Por favor, selecciona un asunto");}
 				else {
-					if (pf.getFechaCita().getValue()==null) {Notification.show("Por favor, selecciona una fecha");}
+					if (_poner_Fecha.getFechaCita().getValue()==null) {Notification.show("Por favor, selecciona una fecha");}
 					else {
-				Asunto asunto = pa.getSeleccionAsunto().getValue();
-				adm.Crear_Cita_Nuevo_Cliente(pf.getFechaCita().getValue(), pcl.ncl.getNuevoCliente().getValue(),
-						pcl.ncl.getDireccion().getValue(), pcl.ncl.getTelefono().getValue(), asunto.getORMID());
+				Asunto asunto = _poner_Asunto.getSeleccionAsunto().getValue();
+				adm.Crear_Cita_Nuevo_Cliente(_poner_Fecha.getFechaCita().getValue(), _poner_Cliente._nuevo_Cliente.getNuevoCliente().getValue(),
+						_poner_Cliente._nuevo_Cliente.getDireccion().getValue(), _poner_Cliente._nuevo_Cliente.getTelefono().getValue(), asunto.getORMID());
 
 				
-				pcl._cliente = false;
+				_poner_Cliente._cliente = false;
 				}
 				}
 			}
 		} else {
-			if (pa._asunto) {
-				if (pcl.getSeleccionCliente().getValue()==null) {Notification.show("Por favor, selecciona un cliente");}
+			if (_poner_Asunto._asunto) {
+				if (_poner_Cliente.getSeleccionCliente().getValue()==null) {Notification.show("Por favor, selecciona un cliente");}
 				
 					else {
-						if (pf.getFechaCita().getValue()==null) {Notification.show("Por favor, selecciona una fecha");}
+						if (_poner_Fecha.getFechaCita().getValue()==null) {Notification.show("Por favor, selecciona una fecha");}
 						else {
-				Cliente cliente = pcl.getSeleccionCliente().getValue();
-				adm.Crear_Cita_Nuevo_Asunto(pf.getFechaCita().getValue(), pa.na.getNuevoAsunto().getValue(),
+				Cliente cliente = _poner_Cliente.getSeleccionCliente().getValue();
+				adm.Crear_Cita_Nuevo_Asunto(_poner_Fecha.getFechaCita().getValue(),_poner_Asunto._nuevo_Asunto.getNuevoAsunto().getValue(),
 						cliente.getORMID());
-				pa._asunto = false;
+				_poner_Asunto._asunto = false;
 				}
 					}
 			} 
 			else {
-				if (pcl.getSeleccionCliente().getValue()==null) {Notification.show("Por favor, selecciona un cliente");}
+				if (_poner_Cliente.getSeleccionCliente().getValue()==null) {Notification.show("Por favor, selecciona un cliente");}
 				else 
-					if (pa.getSeleccionAsunto().getValue()==null) {Notification.show("Por favor, selecciona un asunto");}
+					if (_poner_Asunto.getSeleccionAsunto().getValue()==null) {Notification.show("Por favor, selecciona un asunto");}
 					else 
-						if (pf.getFechaCita().getValue()==null) {Notification.show("Por favor, selecciona una fecha");}
+						if (_poner_Fecha.getFechaCita().getValue()==null) {Notification.show("Por favor, selecciona una fecha");}
 						else {
-				Asunto asunto = pa.getSeleccionAsunto().getValue();
-				Cliente cliente = pcl.getSeleccionCliente().getValue();
-				adm.Crear_Cita(pf.getFechaCita().getValue(), cliente.getORMID(), asunto.getORMID());
+				Asunto asunto = _poner_Asunto.getSeleccionAsunto().getValue();
+				Cliente cliente = _poner_Cliente.getSeleccionCliente().getValue();
+				adm.Crear_Cita(_poner_Fecha.getFechaCita().getValue(), cliente.getORMID(), asunto.getORMID());
 					}
 
 			}
 		}
-	}
-
-	void Inicializar() {
-		VerticalLayout vl = this.getVaadinVerticalLayout().as(VerticalLayout.class);
-		 vl.addComponentAsFirst(pa);
-		 vl.addComponentAsFirst(pcl);
-		 vl.addComponentAsFirst(pf);
 	}
 
 	 

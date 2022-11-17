@@ -2,16 +2,21 @@ package interfazdeusuario;
 
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
+import bds.iAdministrador;
 import vistas.VistaAdministrador;
 
 public class Administrador extends VistaAdministrador {
 	 
-     public Gestionar_Citas gc = new Gestionar_Citas();
+	public iAdministrador _iAdministrador;
+	public Gestionar_Citas _gestionar_Citas;
 
 	 public Administrador() {
-		 VerticalLayout vl = this.getVaadinVerticalLayout().as(VerticalLayout.class);
-		 vl.add(gc);
 		 
+		 Gestionar_Citas();
 	 }
+	 
+	 public void Gestionar_Citas() {
+		 this.getVaadinVerticalLayout().as(VerticalLayout.class).add(_gestionar_Citas);
+		}
 	 
 }
