@@ -59,7 +59,7 @@ public class MainView extends VerticalLayout {
     	
         add(gen);
         
-        LoginForm vl = gen.ln.getVaadinLoginForm();
+        LoginForm vl = gen._login.getVaadinLoginForm();
     	
         
     	vl.addLoginListener(e -> {

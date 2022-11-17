@@ -8,7 +8,7 @@ import vistas.VistaAdministrador;
 public class Administrador extends VistaAdministrador {
 	 
 	public iAdministrador _iAdministrador;
-	public Gestionar_Citas _gestionar_Citas;
+	public Gestionar_Citas _gestionar_Citas = new Gestionar_Citas();
 
 	 public Administrador() {
 		 
