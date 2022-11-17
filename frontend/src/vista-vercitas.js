@@ -1,8 +1,7 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
 import '@vaadin/vaadin-grid/src/vaadin-grid-column.js';
-import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 import '@vaadin/vaadin-date-picker/src/vaadin-date-picker.js';
-import '@vaadin/vaadin-button/src/vaadin-button.js';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 
 class VistaVercitas extends PolymerElement {
 
@@ -17,9 +16,6 @@ class VistaVercitas extends PolymerElement {
             </style>
 <vaadin-vertical-layout style="width: 100%; height: 100%;" id="vaadinVerticalLayout">
  <vaadin-vertical-layout theme="spacing" id="tabla" style="align-self: stretch;"></vaadin-vertical-layout>
- <vaadin-button id="verInformacionCliente" style="align-self: stretch;">
-   Ver Informacion del Cliente 
- </vaadin-button>
 </vaadin-vertical-layout>
 `;
     }

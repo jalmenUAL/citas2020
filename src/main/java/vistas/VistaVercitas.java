@@ -29,8 +29,7 @@ public class VistaVercitas extends PolymerTemplate<VistaVercitas.VistaVercitasMo
 	private Element vaadinVerticalLayout;
 	 
 	 
-	@Id("verInformacionCliente")
-	private Button verInformacionCliente;
+	 
 
 
 	@Id("tabla")
@@ -62,13 +61,7 @@ public class VistaVercitas extends PolymerTemplate<VistaVercitas.VistaVercitasMo
 		this.vaadinVerticalLayout = vaadinVerticalLayout;
 	}
 
-	public Button getVerInformacionCliente() {
-		return verInformacionCliente;
-	}
-
-	public void setVerInformacionCliente(Button verInformacionCliente) {
-		this.verInformacionCliente = verInformacionCliente;
-	}
+	 
 
 	public Element getTabla() {
 		return tabla;
